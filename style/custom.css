@@ -1,0 +1,112 @@
+body {
+    background-color: #dfdfdf;
+}
+
+/* ALL BUTTONS */
+button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+/* ENABLED SECONDARY BUTTON */
+/* secondary button */
+.btn-secondary {
+    background: #2d2c2c;
+    border: 0.125rem solid;
+    border-color: #636262;
+    border-radius: 0.1875rem;
+    box-sizing: border-box;
+    color: #c7c6c6;
+    cursor: pointer;
+    font-family: "Segoe UI", Tahoma, Helvetica, sans-serif;
+    height: 2rem;
+    min-width: 6rem;
+    padding: 0.25rem;
+    white-space: nowrap;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+}
+/* secondary button :active*/
+.btn-secondary:not(:disabled):not(.disabled):active {
+    background: #414040;
+    border-color: transparent;
+    color: #FFFFFF;
+}
+/* secondary button :hover*/
+.btn-secondary:hover, .btn-secondary:focus:enabled {
+    background: #636262;
+    border-color: transparent;
+    color: #FFFFFF;
+}
+/* secondary button :focus*/
+.btn-secondary:focus, .btn-secondary:focus:enabled {
+    background: #636262;
+    border-color: transparent;
+    color: #FFFFFF;
+    outline: 0.125rem solid #FFFFFF;
+    outline-offset: -0.25rem;
+}
+/* secondary button (checked)*/
+.fp-viewbar:not(.disabled) a.checked:not(:disabled):not(.disabled) {
+    color: #fff;
+    background-color: #1f2021;
+    border-color: #191a1b;
+}
+
+/* DISABLED SECONDARY BUTTON */
+/* secondary button */
+div.disabled .btn-secondary {
+    background: #2d2c2c;
+    border-color: #2b2a2a;
+    color: #636262;
+    cursor: default;
+}
+
+/* ENABLED PRIMARY BUTTON */
+/* primary button */
+.btn-primary, .btn-default {
+    background: #6264A7;
+    border: 0.125rem solid;
+    border-color: transparent;
+    border-radius: 0.1875rem;
+    box-sizing: border-box;
+    color: #201F1F;
+    cursor: pointer;
+    font: inherit;
+    height: 2rem;
+    min-width: 6rem;
+    padding: 0.25rem;
+    white-space: nowrap;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+}
+/* primary button :active*/
+.btn-primary:not(:disabled):not(.disabled):active, .btn-default:not(:disabled):not(.disabled):active {
+    background: #A6A7DC;
+    border-color: transparent;
+    color: #201F1F;
+}
+/* primary button :hover*/
+.btn-primary:hover, .btn-primary:focus:enabled, .btn-default:hover, .btn-default:focus:enabled {
+    background: #BDBDE6;
+    border-color: transparent;
+    color: #201F1F;
+}
+/* primary button :focus*/
+.btn-primary:focus, .btn-primary:focus:enabled, .btn-default:focus, .btn-default:focus:enabled {
+    background: #6264A7;
+    border-color: transparent;
+    color: #201F1F;
+    outline: 0.125rem solid #201F1F;
+    outline-offset: -0.25rem;
+}
+
