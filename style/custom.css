@@ -11,6 +11,13 @@ body {
     background-color: #f3f2f1;
 }
 
+.course-content ul li.section.main {
+    border-bottom: 0;
+}
+#region-main .card {
+    border: 0;
+}
+
 /* footer logo */
 .footerlogo {
     width:100%;
