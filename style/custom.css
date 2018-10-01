@@ -1,3 +1,12 @@
+.topics .section .activity {
+    background-color: #fff;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 2px;
+}
+.card-body {
+    background-color: #f3f2f1;
+}
 body {
     background-color: #f3f2f1;
 }
@@ -16,7 +25,6 @@ body {
 .footerlogo img {
     float:right;
     padding-right:70px;
-
 }
 
 /* ALL BUTTONS */
