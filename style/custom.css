@@ -17,6 +17,20 @@ body {
 #region-main .card {
     border: 0;
 }
+#course_page_title {
+    margin-left: 16px;
+    background-color: #fff;
+    border-left: 8px #fc852c solid;
+    height: 200px;
+    font-size: 4em;
+    padding-top: 70px;
+    padding-left: 40px;
+}
+.sectionname {
+    padding-left: 32px;
+    font-size: 1em;
+}
+
 
 /* footer logo */
 .footerlogo {
