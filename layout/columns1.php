@@ -23,15 +23,28 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
+global $PAGE;
 
 $bodyattributes = $OUTPUT->body_attributes([]);
+
+$course_page = $CFG->wwwroot.'/course/view.php?id='.$PAGE->course->id;
+
+// determine if page is main course page, and if it is then remove the "< Course Overview" link text
+$url = $PAGE->url;
+$link_text="";
+if ((strpos($url, 'course/view.php') !== false) && (strpos($url, 'section=') == false) ){
+    $link_text="";
+} else {
+    $link_text="< Course Overview";
+}
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
     'moodle_logo' => $OUTPUT->image_url('moodlelogo', 'theme'),
-
+    'course_page' => $course_page,
+    'link_text' => $link_text,
 ];
 
 echo $OUTPUT->render_from_template('theme_boost_o365teams/columns1', $templatecontext);

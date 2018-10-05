@@ -51,7 +51,10 @@
                     <div class="card">
                         <div class="card-body">
                             {{{ output.course_content_header }}}
-                            <div id="course_page_title">{{{ output.page_title }}}</div>
+                            <div id="course_page_title">
+                               <div class="back_course_main"><a href="{{{course_page}}}">{{{link_text}}}</a></div>
+                               <div class="page_title">{{{ output.page_title }}}</div>
+                            </div>
                             {{{ output.main_content }}}
                             {{{ output.activity_navigation }}}
                             {{{ output.course_content_footer }}}

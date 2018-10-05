@@ -1,38 +1,243 @@
-.topics .section .activity {
+/* topics format START */
+.format-topics .section .activity {
     background-color: #fff;
     padding: 10px;
     padding-left: 20px;
     margin-top: 2px;
 }
+.format-topics .sectionname {
+    padding-left: 32px;
+    font-size: 1em;
+}
+.format-topics #completionprogressid {
+    display: none;
+}
+.format-topics .section_availability .ishidden {
+    padding-left: 32px;
+}
+.format-topics .availabilityinfo.ishidden {
+    display: none;
+}
+/*topics format END */
+/* weeks format START */
+.format-weeks .weeks .section .activity{
+    background-color: #fff;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 2px;
+}
+.format-weeks .weeks .sectionname {
+    padding-left: 32px;
+    font-size: 1em;
+}
+.format-weeks .course-content .current::before {
+    border: 0px;
+}
+.format-weeks .section_availability .ishidden {
+   padding-left: 32px;
+}
+/* weeks format END */
+/* collapsable topics format START */
+.format-collapsibletopics .section .activity {
+    background-color: #fff;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 2px;
+}
+.format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
+    font-size: 15px;
+    color: #000;
+}
+.format-collapsibletopics .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="true"], .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="false"] {
+    margin-left: 32px;
+    background-size: 13px 13px;
+    font-size: 0.8rem;
+}
+.format-collapsibletopics .course-content ul.collapsibletopics li.section ul.section {
+    padding-left: 1rem;
+}
+.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle ~ .section-summary-activities,
+.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle.collapsed ~ .section-summary-activities{
+    display: none;
+}
+.format-collapsibletopics .expandall {
+    display: none;
+}
+.format-collapsibletopics #completionprogressid {
+    display: none;
+}
+.format-collapsibletopics .availabilityinfo.ishidden {
+    display: none;
+}
+/* collapsable topics format END */
+/* collapsable weeks format START */
+.format-collapsibleweeks .section .activity {
+    background-color: #fff;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 2px;
+}
+.format-collapsibleweeks .course-content ul.collapsibleweeks li.section ul.section {
+    padding-left: 1rem;
+}
+.format-collapsibleweeks .course-content ul.collapsibleweeks a.sectiontoggle[aria-expanded="true"],
+.format-collapsibleweeks .course-content ul.collapsibleweeks a.sectiontoggle[aria-expanded="false"] {
+    margin-left: 32px;
+    background-size: 13px 13px;
+    font-size: 0.8rem;
+}
+.format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
+    font-size: 15px;
+    color: #000;
+}
+.format-collapsibleweeks .section_availability .ishidden {
+    padding-left: 32px;
+}
+/*.format-collapsibleweeks .course-content ul.collapsibleweeks .sectiontoggle ~ .section-summary-activities,*/
+/*.format-collapsibleweeks .course-content ul.collapsibleweeks .sectiontoggle.collapsed ~ .section-summary-activities{*/
+    /*display: none;*/
+/*}*/
+/*.format-collapsibleweeks .expandall {*/
+    /*display: none;*/
+/*}*/
+/*.format-collapsibleweeks #completionprogressid {*/
+    /*display: none;*/
+/*}*/
+/*.format-collapsibleweeks .availabilityinfo.ishidden {*/
+    /*display: none;*/
+/*}*/
+/* collapsable weeks format END */
+/* multi-page topics format START */
+/* main page */
+.format-topics .course-content .section-summary {
+    border: 0;
+}
+.format-topics .course-content .topics .section-summary .section-title {
+    padding-left: 32px;
+    margin: 0;
+}
+.format-topics .course-content ul.topics .section-summary-activities {
+    display: none;
+}
+/* section page */
+.format-topics .single-section h3.sectionname {
+    text-align: unset;
+    padding-left: 28px;
+    font-size: 1em;
+}
+.format-topics .course-content .single-section .section-navigation .mdl-right,
+.format-topics .course-content .single-section .section-navigation .mdl-left {
+    display:none;
+}
+.format-topics #sectionmenu {
+    display: none;
+}
+/*!* multi-page topics format END *!*/
+/*!* multi-page weeks format START *!*/
+.format-weeks .course-content .section-summary {
+    border: 0;
+}
+.format-weeks .course-content .weeks .section-summary .section-title {
+    padding-left: 32px;
+    margin: 0;
+}
+/*.format-weeks .course-content ul.weeks .section-summary-activities {*/
+    /*display: none;*/
+/*}*/
+/* section page */
+.format-weeks .single-section h3.sectionname {
+    text-align: unset;
+    padding-left: 28px;
+    font-size: 1em;
+}
+/*.format-weeks .course-content .single-section .section-navigation .mdl-right,*/
+/*.format-weeks .course-content .single-section .section-navigation .mdl-left {*/
+    /*display:none;*/
+/*}*/
+/*.format-weeks #sectionmenu {*/
+    /*display: none;*/
+/*}*/
+/*.format-weeks .availabilityinfo.ishidden {*/
+   /*display: none;*/
+/*}*/
+/*!* multi-page weeks format END *!*/
+
+
+
+
+
+
+/* header START */
+#course_page_title {
+    position: relative;
+    margin-left: 32px;
+    background-color: #fff;
+    border-left: 8px #fc852c solid;
+    min-height: 180px;
+    font-size: 4em;
+    padding-left: 40px;
+}
+.format-topics .back_course_main {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    padding-left: 6px;
+    padding-top: 26px;
+}
+.page_title {
+    padding-top:20px;
+}
+/* header END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!* all course formats START *!*/
+/*#completionprogressid {*/
+    /*display: none;*/
+/*}*/
+/*.availabilityinfo.ishidden {*/
+    /*padding-left: 32px;*/
+/*}*/
+/*!* all course formats START *!*/
+
+
+
+
+
+
+
+/* course body START */
 .card-body {
     background-color: #f3f2f1;
 }
 body {
     background-color: #f3f2f1;
 }
-
 .course-content ul li.section.main {
     border-bottom: 0;
 }
 #region-main .card {
     border: 0;
 }
-#course_page_title {
-    margin-left: 16px;
-    background-color: #fff;
-    border-left: 8px #fc852c solid;
-    height: 180px;
-    font-size: 4em;
-    padding-top: 60px;
-    padding-left: 40px;
-}
-.sectionname {
-    padding-left: 32px;
-    font-size: 1em;
-}
 
+a{
+    color: #000;
+}
+/* course body END */
 
-/* footer logo */
+/* footer logo START */
 .footerlogo {
     width:100%;
     color:gold;
@@ -47,6 +252,20 @@ body {
     float:right;
     padding-right:70px;
 }
+/* footer logo END */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ALL BUTTONS */
 button {
