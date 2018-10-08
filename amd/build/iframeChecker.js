@@ -1,4 +1,4 @@
-define(['jquery', 'core/cfg'], function ($, cfg) {
+define(['jquery', 'core/config'], function ($, cfg) {
     return {
         init: function() {
             console.log(cfg);
