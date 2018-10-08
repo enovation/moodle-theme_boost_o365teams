@@ -384,7 +384,7 @@ nav.navbar {
 div#nav-drawer {
     display: none;
 }
-aside#block-region-side-pre {
+aside#block-region-side-pre:parent {
     display: none;
 }
 footer#page-footer {
