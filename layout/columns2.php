@@ -53,38 +53,4 @@ $templatecontext = [
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
 
-$js = '
-function inIframe () {
-    try {
-        return window.self !== window.top;
-    } catch (e) {
-        return true;
-    }
-}
-
-if (inIframe()) {
-    // if in iframe, hide navbar, nav-drawer, side-pre, and footer
-    let navbar = document.getElementsByTagName("nav")[0];
-    navbar.style.display = "none";
-    let navdrawer = document.getElementsById("nav-drawer")[0];
-    navdrawer.style.display = "none";
-    let sidepre = document.getElementsById("block-region-side-pre")[0];
-    sidepre.style.display = "none";
-    let footer = document.getElementsById("page-footer")[0];
-    footer.style.display = "none";
-} else {
-    // if not in iframe, show navbar, nav-drawer, side-pre, and footer
-    let navbar = document.getElementsByTagName("nav")[0];
-    navbar.style.display = "block";
-    let navdrawer = document.getElementsById("nav-drawer")[0];
-    navdrawer.style.display = "block";
-    let sidepre = document.getElementsById("block-region-side-pre")[0];
-    sidepre.style.display = "block";
-    let footer = document.getElementsById("page-footer")[0];
-    footer.style.display = "block";
-}
-';
-
-echo html_writer::script($js);
-
 echo $OUTPUT->render_from_template('theme_boost_o365teams/columns2', $templatecontext);
