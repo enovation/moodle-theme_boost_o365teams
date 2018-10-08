@@ -375,6 +375,6 @@ div.disabled .btn-secondary {
     outline: 0.125rem solid #201F1F;
     outline-offset: -0.25rem;
 }
-div#page {
+body {
     display: none;
 }

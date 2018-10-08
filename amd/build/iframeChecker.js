@@ -12,7 +12,7 @@ define(['jquery', 'core/config'], function ($, cfg) {
                 $("footer#page-footer").hide();
             }
 
-            $("div#page").fadeIn(150);
+            $("body").fadeIn(150);
             $("img#loadingicon").fadeOut(150);
         }
     }
