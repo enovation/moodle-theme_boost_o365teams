@@ -64,23 +64,23 @@ function inIframe () {
 
 if (inIframe()) {
     // if in iframe, hide navbar, nav-drawer, side-pre, and footer
-    let navbar = window.getElementsByTagName("nav")[0];
+    let navbar = document.getElementsByTagName("nav")[0];
     navbar.style.display = "none";
-    let navdrawer = window.getElementsById("nav-drawer")[0];
+    let navdrawer = document.getElementsById("nav-drawer")[0];
     navdrawer.style.display = "none";
-    let sidepre = window.getElementsById("block-region-side-pre")[0];
+    let sidepre = document.getElementsById("block-region-side-pre")[0];
     sidepre.style.display = "none";
-    let footer = window.getElementsById("page-footer")[0];
+    let footer = document.getElementsById("page-footer")[0];
     footer.style.display = "none";
 } else {
     // if not in iframe, show navbar, nav-drawer, side-pre, and footer
-    let navbar = window.getElementsByTagName("nav")[0];
+    let navbar = document.getElementsByTagName("nav")[0];
     navbar.style.display = "block";
-    let navdrawer = window.getElementsById("nav-drawer")[0];
+    let navdrawer = document.getElementsById("nav-drawer")[0];
     navdrawer.style.display = "block";
-    let sidepre = window.getElementsById("block-region-side-pre")[0];
+    let sidepre = document.getElementsById("block-region-side-pre")[0];
     sidepre.style.display = "block";
-    let footer = window.getElementsById("page-footer")[0];
+    let footer = document.getElementsById("page-footer")[0];
     footer.style.display = "block";
 }
 ';
