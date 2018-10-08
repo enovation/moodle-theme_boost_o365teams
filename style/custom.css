@@ -378,3 +378,15 @@ div.disabled .btn-secondary {
 body {
     display: none;
 }
+nav.navbar {
+    display: none;
+}
+div#nav-drawer {
+    display: none;
+}
+aside#block-region-side-pre {
+    display: none;
+}
+footer#page-footer {
+    display: none;
+}

@@ -1,19 +1,17 @@
-define(['jquery', 'core/config'], function ($, cfg) {
+define(['jquery'], function ($) {
     return {
         init: function() {
-            console.log(cfg);
-            $('body').append('<img id="loadingicon" src="'+cfg.loadingicon+'" />');
-
-            if (window.location != window.parent.location) {
+            if (window.location == window.parent.location) {
                 // in iframe
-                $("nav.navbar").hide();
-                $("div#nav-drawer").hide();
-                $("aside#block-region-side-pre").parent().hide();
-                $("footer#page-footer").hide();
+                $("nav.navbar").show();
+                $("div#nav-drawer").show();
+                $("aside#block-region-side-pre").parent().show();
+                $("footer#page-footer").show();
+            } else {
+
             }
 
             $("body").fadeIn(150);
-            $("img#loadingicon").fadeOut(150);
         }
     }
 });
