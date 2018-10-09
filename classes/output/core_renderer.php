@@ -51,13 +51,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
         global $DB, $COURSE;
 
         $coursecontext = context_course::instance($COURSE->id);
-        $roles = get_user_roles($coursecontext);
+        $roleassignments = get_user_roles($coursecontext);
         $teacherrole = $DB->get_record('role', array('shortname' => 'editingteacher'));
         $noneditingteacherrole = $DB->get_record('role', array('shortname' => 'teacher'));
 
         $link = '';
-        foreach ($roles as $role) {
-            if (in_array($role->id, array($teacherrole->id, $noneditingteacherrole->id))) {
+        foreach ($roleassignments as $roleassignment) {
+            if (in_array($roleassignment->roleid, array($teacherrole->id, $noneditingteacherrole->id))) {
                 $editcourselink = new moodle_url('/course/view.php',
                     array('id' => $COURSE->id, 'notifyeditingon' => 1));
                 $link = html_writer::link($editcourselink, get_string('editcourse', 'theme_boost_o365teams'),
