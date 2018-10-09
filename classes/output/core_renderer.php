@@ -53,11 +53,18 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string HTML to display the main header.
      */
     public function full_header() {
-        $header = parent::full_header();
+        global $PAGE;
 
+        $header = new stdClass();
+        $header->settingsmenu = $this->context_header_settings_menu();
+        $header->contextheader = $this->context_header();
+        $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
+        $header->navbar = $this->navbar();
+        $header->pageheadingbutton = $this->page_heading_button();
+        $header->courseheader = $this->course_header();
         $header->teachereditlink = 'link placeholder';
 
-        return $header;
+        return $this->render_from_template('theme_boost_o365teams/header', $header);
     }
 
     public function footer() {
