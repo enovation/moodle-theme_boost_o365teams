@@ -14,12 +14,13 @@ define(['jquery'], function ($) {
                 $('div#page').css('margin-top', '0');
                 $('section#region-main.has-blocks').css('width', '100%');
                 $('div#page-wrapper').css('margin-bottom', '0');
-                $('div.context-header-settings-menu').css('display', 'none');
-                $('div.region-main-settings-menu').css('display', 'none');
-                $('div.region_main_settings_menu_proxy').css('display', 'none');
                 $('div.teachereditlink').css('display', 'block');
-                $('div.action-menu-trigger').css('display', 'none');
-                $('div.ml-auto').css('display', 'none !important');
+                $('div.context-header-settings-menu').remove();
+                $('div.region-main-settings-menu').remove();
+                $('div.region_main_settings_menu_proxy').remove();
+                $('div.action-menu-trigger').remove();
+                $('div.ml-auto').remove();
+                $('a.printicon').remove();
             }
 
             $("body").fadeIn(150);
