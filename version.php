@@ -24,6 +24,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2018091000;
+$plugin->version   = 2018091001;
 $plugin->requires  = 2018051700;
 $plugin->component = 'theme_boost_o365teams';

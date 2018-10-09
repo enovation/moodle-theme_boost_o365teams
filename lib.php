@@ -40,11 +40,17 @@ use theme_boost_o365teams\css_processor;
  */
 function theme_boost_o365teams_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
 
-    $serveimage = false;
-
-    if ($serveimage) {
+    static $theme;
+    if (empty($theme)) {
         $theme = theme_config::load('boost_o365teams');
-        return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+    }
+    if ($context->contextlevel == CONTEXT_SYSTEM) {
+        if ($filearea === 'footer_stamp') {
+            return $theme->setting_file_serve('footer_stamp', $args, $forcedownload, $options);
+
+        } else {
+            send_file_not_found();
+        }
     } else {
         send_file_not_found();
     }

@@ -34,7 +34,7 @@
     border: 0px;
 }
 .format-weeks .section_availability .ishidden {
-   padding-left: 32px;
+    padding-left: 32px;
 }
 /* weeks format END */
 /* collapsable topics format START */
@@ -95,16 +95,16 @@
 }
 /*.format-collapsibleweeks .course-content ul.collapsibleweeks .sectiontoggle ~ .section-summary-activities,*/
 /*.format-collapsibleweeks .course-content ul.collapsibleweeks .sectiontoggle.collapsed ~ .section-summary-activities{*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 /*.format-collapsibleweeks .expandall {*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 /*.format-collapsibleweeks #completionprogressid {*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 /*.format-collapsibleweeks .availabilityinfo.ishidden {*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 /* collapsable weeks format END */
 /* multi-page topics format START */
@@ -142,7 +142,7 @@
     margin: 0;
 }
 /*.format-weeks .course-content ul.weeks .section-summary-activities {*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 /* section page */
 .format-weeks .single-section h3.sectionname {
@@ -152,13 +152,13 @@
 }
 /*.format-weeks .course-content .single-section .section-navigation .mdl-right,*/
 /*.format-weeks .course-content .single-section .section-navigation .mdl-left {*/
-    /*display:none;*/
+/*display:none;*/
 /*}*/
 /*.format-weeks #sectionmenu {*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 /*.format-weeks .availabilityinfo.ishidden {*/
-   /*display: none;*/
+/*display: none;*/
 /*}*/
 /*!* multi-page weeks format END *!*/
 
@@ -168,7 +168,7 @@
 
 
 /* header START */
-#course_page_title {
+body #course_page_title {
     position: relative;
     margin-left: 32px;
     background-color: #fff;
@@ -177,7 +177,7 @@
     font-size: 4em;
     padding-left: 40px;
 }
-.format-topics .back_course_main {
+body .back_course_main {
     position: relative;
     display: block;
     font-size: 16px;
@@ -205,10 +205,10 @@
 
 /*!* all course formats START *!*/
 /*#completionprogressid {*/
-    /*display: none;*/
+/*display: none;*/
 /*}*/
 /*.availabilityinfo.ishidden {*/
-    /*padding-left: 32px;*/
+/*padding-left: 32px;*/
 /*}*/
 /*!* all course formats START *!*/
 
@@ -389,11 +389,4 @@ section[data-region="blocks-column"] {
 }
 footer#page-footer {
     display: none;
-}
-div.teachereditlink {
-    display: none;
-    float: right;
-}
-header#page-header {
-    clear: both;
 }

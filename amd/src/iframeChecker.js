@@ -8,19 +8,20 @@ define(['jquery'], function ($) {
                 $('div#nav-drawer').show();
                 $('section[data-region="blocks-column"]').show();
                 $('footer#page-footer').show();
+                $('div#course_page_title').css('display', 'none');
             } else {
                 // in iframe, hide page elements
                 $('body.drawer-open-left').css('margin-left', '0');
                 $('div#page').css('margin-top', '0');
                 $('section#region-main.has-blocks').css('width', '100%');
                 $('div#page-wrapper').css('margin-bottom', '0');
+                $('div.context-header-settings-menu').css('display', 'none');
+                $('div.region-main-settings-menu').css('display', 'none');
+                $('div.region_main_settings_menu_proxy').css('display', 'none');
                 $('div.teachereditlink').css('display', 'block');
-                $('div.context-header-settings-menu').remove();
-                $('div.region-main-settings-menu').remove();
-                $('div.region_main_settings_menu_proxy').remove();
-                $('div.action-menu-trigger').remove();
-                $('div.ml-auto').remove();
-                $('a.printicon').remove();
+                $('div.action-menu-trigger').css('display', 'none');
+                $('div.ml-auto').css('display', 'none !important');
+                $('header#page-header').css('display', 'none');
             }
 
             $("body").fadeIn(150);

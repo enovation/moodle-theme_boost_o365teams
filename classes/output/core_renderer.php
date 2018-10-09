@@ -59,9 +59,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
         foreach ($roleassignments as $roleassignment) {
             if (in_array($roleassignment->roleid, array($teacherrole->id, $noneditingteacherrole->id))) {
                 $editcourselink = new moodle_url('/course/view.php',
-                    array('id' => $COURSE->id, 'notifyeditingon' => 1));
+                        array('id' => $COURSE->id, 'notifyeditingon' => 1));
                 $link = html_writer::link($editcourselink, get_string('editcourse', 'theme_boost_o365teams'),
-                    array('target' => '_blank'));
+                        array('target' => '_blank'));
                 break;
             }
         }
@@ -79,5 +79,17 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $footer .= html_writer::script($js);
 
         return $footer;
+    }
+    function get_footer_stamp_url($maxwidth = 120, $maxheight = 60) {
+        global $CFG, $PAGE;
+
+        if (!empty($PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp'))) {
+            $url = $PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp');
+            // Get a URL suitable for moodle_url.
+            $relativebaseurl = preg_replace('|^https?://|i', '//', $CFG->wwwroot);
+            $url = str_replace($relativebaseurl, '', $url);
+            return new moodle_url($url);
+        }
+        return "";
     }
 }

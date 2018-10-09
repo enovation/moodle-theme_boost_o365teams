@@ -76,6 +76,15 @@
                                 <div class="region_main_settings_menu_proxy"></div>
                             {{/hasregionmainsettingsmenu}}
                             {{{ output.course_content_header }}}
+                            <div id="course_page_title">
+                               {{#is_course_overview}}
+                                  <div class="back_course_main"><a href="{{{course_page}}}">< Course Overview</a></div>
+                               {{/is_course_overview}}
+                               {{^is_course_overview}}
+                                  <div class="back_course_main">&nbsp; </div>
+                               {{/is_course_overview}}
+                               <div class="page_title">{{{ output.page_title }}}</div>
+                            </div>
                             {{{ output.main_content }}}
                             {{{ output.activity_navigation }}}
                             {{{ output.course_content_footer }}}
@@ -92,7 +101,9 @@
     </div>
     {{> theme_boost/nav-drawer }}
 </div>
-
+<div class="footerlogo">
+       <img src="{{{ output.get_footer_stamp_url }}}" />
+    </div>
 {{> theme_boost/footer }}
 
 </body>
