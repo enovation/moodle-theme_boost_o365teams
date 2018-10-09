@@ -29,3 +29,4 @@ $string['pluginname'] = 'Boost Office365 Teams';
 $string['region-side-pre'] = 'Right';
 
 $string['placementfrontpage'] = 'Front page';
+$string['editcourse'] = 'Edit course';

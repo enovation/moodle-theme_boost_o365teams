@@ -47,24 +47,29 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $output;
     }
 
-    /**
-     * Wrapper for header elements.
-     *
-     * @return string HTML to display the main header.
-     */
-    public function full_header() {
-        global $PAGE;
+    public function edit_link() {
+        global $DB, $COURSE;
 
-        $header = new stdClass();
-        $header->settingsmenu = $this->context_header_settings_menu();
-        $header->contextheader = $this->context_header();
-        $header->hasnavbar = empty($PAGE->layout_options['nonavbar']);
-        $header->navbar = $this->navbar();
-        $header->pageheadingbutton = $this->page_heading_button();
-        $header->courseheader = $this->course_header();
-        $header->teachereditlink = 'link placeholder';
+        $coursecontext = context_course::instance($COURSE->id);
+        $roles = get_user_roles($coursecontext);
+        $teacherrole = $DB->get_record('role', array('shortname' => 'editingteacher'));
+        $noneditingteacherrole = $DB->get_record('role', array('shortname' => 'teacher'));
 
-        return $this->render_from_template('theme_boost_o365teams/header', $header);
+        $link = '';
+        foreach ($roles as $role) {
+            if (in_array($role->id, array($teacherrole->id, $noneditingteacherrole->id))) {
+                $editcourselink = new moodle_url('/course/view.php',
+                    array('id' => $COURSE->id, 'notifyeditingon' => 1));
+                $link = html_writer::link($editcourselink, get_string('editcourse', 'theme_boost_o365teams'),
+                    array('target' => '_blank'));
+                break;
+            }
+        }
+
+        $linkobj = new stdClass();
+        $linkobj->teachereditlink = $link;
+
+        return $this->render_from_template('theme_boost_o365teams/edit_link', $link);
     }
 
     public function footer() {
