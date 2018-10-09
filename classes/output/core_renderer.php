@@ -69,7 +69,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $linkobj = new stdClass();
         $linkobj->teachereditlink = $link;
 
-        return $this->render_from_template('theme_boost_o365teams/edit_link', $link);
+        return $this->render_from_template('theme_boost_o365teams/edit_link', $linkobj);
     }
 
     public function footer() {
