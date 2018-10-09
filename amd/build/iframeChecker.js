@@ -19,6 +19,7 @@ define(['jquery'], function ($) {
                 $('div.region_main_settings_menu_proxy').css('display', 'none');
                 $('div.teachereditlink').css('display', 'block');
                 $('div.action-menu-trigger').css('display', 'none');
+                $('div.ml-auto').css('display', 'none !important');
             }
 
             $("body").fadeIn(150);
