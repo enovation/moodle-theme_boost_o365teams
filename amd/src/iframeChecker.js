@@ -14,6 +14,9 @@ define(['jquery'], function ($) {
                 $('#page').css('margin-top', '0');
                 $('#region-main.has-blocks').css('width', '100%');
                 $('#page-wrapper').css('margin-bottom', '0');
+                $('div#context-header-settings-menu').css('display', 'none');
+                $('div#region-main-settings-menu').css('display', 'none');
+                $('div#region_main_settings_menu_proxy').css('display', 'none');
             }
 
             $("body").fadeIn(150);
