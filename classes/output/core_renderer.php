@@ -47,6 +47,19 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $output;
     }
 
+    /**
+     * Wrapper for header elements.
+     *
+     * @return string HTML to display the main header.
+     */
+    public function full_header() {
+        $header = parent::full_header();
+
+        $header->teachereditlink = 'link placeholder';
+
+        return $header;
+    }
+
     public function footer() {
         $footer = parent::footer();
 

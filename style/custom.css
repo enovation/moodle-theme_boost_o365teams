@@ -390,3 +390,7 @@ section[data-region="blocks-column"] {
 footer#page-footer {
     display: none;
 }
+div.teachereditlink {
+    display: none;
+    float: right;
+}
