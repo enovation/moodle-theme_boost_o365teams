@@ -59,9 +59,7 @@
     {{>theme_boost/navbar}}
 
     <div id="page" class="container-fluid">
-        {{{ output.edit_link }}}
         {{{ output.full_header }}}
-
         <div id="page-content" class="row">
             <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
@@ -77,6 +75,7 @@
                             {{/hasregionmainsettingsmenu}}
                             {{{ output.course_content_header }}}
                             <div id="course_page_title">
+                            {{{ output.edit_link }}}
                                {{#is_course_overview}}
                                   <div class="back_course_main"><a href="{{{course_page}}}">< Course Overview</a></div>
                                {{/is_course_overview}}
