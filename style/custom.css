@@ -394,6 +394,6 @@ div.teachereditlink {
 header#page-header {
     clear: both;
 }
-div.page-content {
+div#page-content {
     clear: both;
 }
