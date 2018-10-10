@@ -59,6 +59,7 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'course_page' => $course_page,
     'is_course_overview' => $is_course_overview,
+    'moodle_logo' => $OUTPUT->image_url('moodlelogo', 'theme'),
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;

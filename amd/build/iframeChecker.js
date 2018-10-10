@@ -25,7 +25,7 @@ define(['jquery'], function ($) {
                 $('header#page-header').css('display', 'none');
             }
 
-            $("body").fadeIn(100);
+            $("body").fadeIn(150);
         }
     }
 });

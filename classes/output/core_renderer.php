@@ -90,6 +90,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $url = str_replace($relativebaseurl, '', $url);
             return new moodle_url($url);
         }
-        return "";
+        return false;
     }
 }
