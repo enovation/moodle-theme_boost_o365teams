@@ -162,9 +162,11 @@
 /*}*/
 /*!* multi-page weeks format END *!*/
 
-
-
-
+/*!* modules START *!*/
+.path-mod .card-body div[role="main"] {
+    margin-left:32px;
+}
+/*!* modules END *!*/
 
 
 /* header START */
@@ -369,12 +371,7 @@ div.disabled .btn-secondary {
 }
 /* primary button :focus*/
 .btn-primary:focus, .btn-primary:focus:enabled, .btn-default:focus, .btn-default:focus:enabled {
-    background: #6264A7;
-    border-color: transparent;
-    color: #201F1F;
-    outline: 0.125rem solid #201F1F;
-    outline-offset: -0.25rem;
-}
+
 body {
     display: none;
 }
@@ -389,4 +386,11 @@ section[data-region="blocks-column"] {
 }
 footer#page-footer {
     display: none;
+}
+div.teachereditlink {
+    display: none;
+    float: right;
+}
+header#page-header {
+    clear: both;
 }

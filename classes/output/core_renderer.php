@@ -59,9 +59,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
         foreach ($roleassignments as $roleassignment) {
             if (in_array($roleassignment->roleid, array($teacherrole->id, $noneditingteacherrole->id))) {
                 $editcourselink = new moodle_url('/course/view.php',
-                        array('id' => $COURSE->id, 'notifyeditingon' => 1));
+                    array('id' => $COURSE->id, 'notifyeditingon' => 1));
                 $link = html_writer::link($editcourselink, get_string('editcourse', 'theme_boost_o365teams'),
-                        array('target' => '_blank'));
+                    array('target' => '_blank'));
                 break;
             }
         }

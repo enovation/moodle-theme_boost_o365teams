@@ -17,6 +17,15 @@ if ($ADMIN->fulltree) {
 
     $settings = new theme_boost_admin_settingspage_tabs('themesettingboost_o365teams', get_string('configtitle', 'theme_boost'));
 
+    // Add logo stamp
+    $name = "theme_boost_o365teams/footer_stamp";
+    $title = get_string('footer_stamp_title','theme_boost_o365teams');
+    $description = get_string('footer_stamp_desc', 'theme_boost_o365teams');
+
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'footer_stamp');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     $settings->add($page);
 
 }
