@@ -375,6 +375,7 @@ div.disabled .btn-secondary {
 
 /* Teacher Edit Link START */
 div.teachereditlink {
+    background-color: rgb(244,244,244);
     position: relative;
     display: none;
     float: right;
