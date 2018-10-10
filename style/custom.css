@@ -371,7 +371,7 @@ div.disabled .btn-secondary {
 }
 /* primary button :focus*/
 .btn-primary:focus, .btn-primary:focus:enabled, .btn-default:focus, .btn-default:focus:enabled {
-
+}
 body {
     display: none;
 }
