@@ -239,7 +239,7 @@ a{
 }
 /* course body END */
 
-/* footer logo START */
+/* footer START */
 .footerlogo {
     width:100%;
     color:gold;
@@ -254,7 +254,11 @@ a{
     float:right;
     padding-right:70px;
 }
-/* footer logo END */
+.user_details {
+    margin-left: 70px;
+    color: black;
+}
+/* footer END */
 
 
 
