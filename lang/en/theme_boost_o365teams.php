@@ -31,4 +31,4 @@ $string['region-side-pre'] = 'Right';
 $string['placementfrontpage'] = 'Front page';
 $string['editcourse'] = 'Edit course';
 $string['footer_stamp_title'] = "Tabs Footer Stamp";
-$string['footer_stamp_desc'] = "Displays Image or logo at bottom right of tabs";
+$string['footer_stamp_desc'] = "Displays Image or logo at bottom right of tabs.<br/>(Max-Height: 60px)";

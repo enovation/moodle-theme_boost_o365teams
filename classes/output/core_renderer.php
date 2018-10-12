@@ -72,6 +72,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render_from_template('theme_boost_o365teams/edit_link', $linkobj);
     }
 
+    public function page_title() {
+        global $CFG, $PAGE;
+        $course_page = $CFG->wwwroot . '/course/view.php?id=' . $PAGE->course->id;
+        $pagetitle = html_writer::link($course_page, $this->page->title, array('target' => '_blank'));
+
+        return $pagetitle;
+    }
     public function user_link() {
         global $USER;
         $profile_page_link = new moodle_url('/user/profile.php',
@@ -92,16 +99,32 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         return $footer;
     }
-    function get_footer_stamp_url($maxwidth = 120, $maxheight = 60) {
-        global $CFG, $PAGE;
+    function get_footer_stamp($maxwidth = 120, $maxheight = 60) {
+        global $CFG, $PAGE, $OUTPUT;
 
         if (!empty($PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp'))) {
-            $url = $PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp');
+            $fileurl = $PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp');
             // Get a URL suitable for moodle_url.
             $relativebaseurl = preg_replace('|^https?://|i', '//', $CFG->wwwroot);
-            $url = str_replace($relativebaseurl, '', $url);
-            return new moodle_url($url);
+            $relativefileurl = str_replace($relativebaseurl, '', $fileurl);
+            $url = new moodle_url($relativefileurl);
+            $img = html_writer::empty_tag('img', array("src" => $url));
+
+
+            $course_page = $this->page->url;
+            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
+
+            return $stamp;
+
+        } else {
+
+            $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme')));
+
+            $course_page = $this->page->url;
+            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
+
+            return $stamp;
         }
-        return false;
+        return "";
     }
 }

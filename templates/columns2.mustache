@@ -101,15 +101,8 @@
     {{> theme_boost/nav-drawer }}
 </div>
 <div class="footerlogo">
-
-{{{ output.user_link }}}
-
-{{#output.get_footer_stamp_url}}
-   <img src="{{{ output.get_footer_stamp_url }}}" />
-{{/output.get_footer_stamp_url}}
-{{^output.get_footer_stamp_url}}
-   <img src="{{{ moodle_logo }}}" />
-{{/output.get_footer_stamp_url}}
+    {{{ output.user_link }}}
+    {{{ output.get_footer_stamp }}}
 </div>
 {{> theme_boost/footer }}
 
