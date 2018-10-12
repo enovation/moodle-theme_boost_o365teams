@@ -17,8 +17,8 @@
 /**
  * A two column layout for the boost theme.
  *
- * @package   theme_boost
- * @copyright 2016 Damyon Wiese
+ * @package   theme_boost_o365teams
+ * @copyright  2018 Enovation Solutions
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
