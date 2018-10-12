@@ -297,6 +297,15 @@ a{
 }
 /* course body END */
 
+/* activity list START */
+.section .activity .actions {
+    float:left;
+    position: static;
+}
+.section .activity .activityinstance {
+    float:left;
+}
+/* activity list END */
 /* footer START */
 .footerlogo {
     width:100%;
