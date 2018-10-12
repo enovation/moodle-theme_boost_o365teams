@@ -211,7 +211,10 @@ body .back_course_main {
 .page_title {
     padding-bottom:30px;
 }
-    /* Teacher Edit Link START */
+.page_title a:active, .page_title a:hover {
+    text-decoration:none;
+}
+/** Teacher Edit Link START */
 div.teachereditlink {
     position: relative;
     display: none;
@@ -243,7 +246,7 @@ div.teachereditlink a:active {
     color: #252424;
     border-color: transparent;
 }
-    /* Teacher Edit Link END */
+/** Teacher Edit Link END */
 /* header END */
 
 

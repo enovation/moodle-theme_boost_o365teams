@@ -71,14 +71,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         return $this->render_from_template('theme_boost_o365teams/edit_link', $linkobj);
     }
-
-    public function page_title() {
-        global $CFG, $PAGE;
-        $course_page = $CFG->wwwroot . '/course/view.php?id=' . $PAGE->course->id;
-        $pagetitle = html_writer::link($course_page, $this->page->title, array('target' => '_blank'));
-
-        return $pagetitle;
-    }
     public function user_link() {
         global $USER;
         $profile_page_link = new moodle_url('/user/profile.php',
@@ -112,7 +104,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
 
             $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
+            $stamp = html_writer::link($course_page, $img);
 
             return $stamp;
 
@@ -121,7 +113,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme')));
 
             $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
+            $stamp = html_writer::link($course_page, $img);
 
             return $stamp;
         }
