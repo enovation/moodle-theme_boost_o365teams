@@ -414,6 +414,9 @@ div.teachereditlink a:active {
 body {
     display: none;
 }
+body.page-login {
+    display: block;
+}
 nav.navbar {
     display: none;
 }
