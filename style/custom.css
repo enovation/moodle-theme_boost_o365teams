@@ -436,6 +436,9 @@ div.teachereditlink a:active {
 body {
     display: none;
 }
+body#page-login-index {
+    display: block;
+}
 nav.navbar {
     display: none;
 }
