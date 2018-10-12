@@ -211,6 +211,39 @@ body .back_course_main {
 .page_title {
     padding-bottom:30px;
 }
+    /* Teacher Edit Link START */
+div.teachereditlink {
+    position: relative;
+    display: none;
+    float: right;
+    z-index: 1;
+    margin-top:26px;
+    margin-right: 40px;
+    font-size:14px;
+    width: unset;
+}
+div.teachereditlink a {
+    background-color: rgb(244,244,244);
+    padding: 8px;
+    border: 0.125rem solid;
+    border-color: #bdbdbd;
+    border-radius: 0.1875rem;
+    color: #5c5b5b;
+    cursor: pointer;
+    padding-top: 1px;
+}
+div.teachereditlink a:hover {
+    background-color: #bdbdbd;
+    text-decoration: none;
+    color: #252424;
+}
+div.teachereditlink a:active {
+    background-color: #929191;
+    text-decoration: none;
+    color: #252424;
+    border-color: transparent;
+}
+    /* Teacher Edit Link END */
 /* header END */
 
 
@@ -399,38 +432,7 @@ div.disabled .btn-secondary {
 .btn-primary:focus, .btn-primary:focus:enabled, .btn-default:focus, .btn-default:focus:enabled {
 }
 
-/* Teacher Edit Link START */
-div.teachereditlink {
-    position: relative;
-    display: none;
-    float: right;
-    z-index: 1;
-    margin-top:26px;
-    margin-right: 40px;
-    font-size:14px;
-    width: unset;
-}
-div.teachereditlink a {
-    background-color: rgb(244,244,244);
-    padding: 8px;
-    border: 0.125rem solid;
-    border-color: #bdbdbd;
-    border-radius: 0.1875rem;
-    color: #5c5b5b;
-    cursor: pointer;
-}
-div.teachereditlink a:hover {
-    background-color: #bdbdbd;
-    text-decoration: none;
-    color: #252424;
-}
-div.teachereditlink a:active {
-    background-color: #929191;
-    text-decoration: none;
-    color: #252424;
-    border-color: transparent;
-}
-/* Teacher Edit Link END */
+
 
 
 body {
