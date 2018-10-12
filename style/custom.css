@@ -20,7 +20,9 @@
     font-weight: 300;
     font-style: normal;
 }
-
+body {
+    font-family: 'TeamsAssets';
+}
 /* topics format START */
 .format-topics .section .activity {
     background-color: #fff;
@@ -194,7 +196,6 @@
 
 /* header START */
 body #course_page_title {
-    font-family: 'TeamsAssets';
     position: relative;
     margin-left: 32px;
     background-color: #fff;
@@ -271,7 +272,6 @@ div.teachereditlink a:active {
 /*padding-left: 32px;*/
 /*}*/
 /*!* all course formats START *!*/
-
 
 
 
