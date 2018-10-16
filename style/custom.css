@@ -24,6 +24,10 @@ body {
     font-family: "Segoe UI","Helvetica Neue","Apple Color Emoji","Segoe UI Emoji",Helvetica,Arial,sans-serif;
 }
 /* topics format START */
+.format-topics.path-course-view .completionprogress {
+    float: left;
+    margin-left: 32px;
+}
 .format-topics .section .activity {
     background-color: #fff;
     padding: 10px;
@@ -45,6 +49,10 @@ body {
 }
 /*topics format END */
 /* weeks format START */
+.format-weeks.path-course-view .completionprogress {
+    float: left;
+    margin-left: 32px;
+}
 .format-weeks .weeks .section .activity{
     background-color: #fff;
     padding: 10px;
@@ -63,6 +71,10 @@ body {
 }
 /* weeks format END */
 /* collapsable topics format START */
+.format-collapsibletopics.path-course-view .completionprogress {
+    float: left;
+    margin-left: 32px;
+}
 .format-collapsibletopics .section .activity {
     background-color: #fff;
     padding: 10px;
@@ -96,6 +108,10 @@ body {
 }
 /* collapsable topics format END */
 /* collapsable weeks format START */
+.format-collapsibleweeks.path-course-view .completionprogress {
+    float: left;
+    margin-left: 32px;
+}
 .format-collapsibleweeks .section .activity {
     background-color: #fff;
     padding: 10px;
