@@ -71,16 +71,20 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         return $this->render_from_template('theme_boost_o365teams/edit_link', $linkobj);
     }
+
     public function user_link() {
         global $USER, $OUTPUT;
-        $profile_page_link = new moodle_url('/user/profile.php',
+
+        $profilepagelink = new moodle_url('/user/profile.php',
                 array('id' => $USER->id));
-        $profilepic =  $OUTPUT->user_picture($USER, array('size'=>26, 'target' => '_blank', 'class' => 'user_details'));
-        $user_details =  $USER->firstname.' '.$USER->lastname;
-        $user_profile = html_writer::link($profile_page_link, $user_details,
+        $profilepic = $OUTPUT->user_picture($USER, array('size'=>26, 'link' => false));
+        $userfullname = fullname($USER);
+        $piclink = html_writer::link($profilepagelink, $profilepic,
+                array('target' => '_blank', 'class' => 'user_details'));
+        $userprofile = html_writer::link($profilepagelink, $userfullname,
                 array('target' => '_blank'));
 
-        return $profilepic . $user_profile;
+        return $piclink . $userprofile;
     }
 
     public function footer() {
