@@ -397,9 +397,9 @@ button {
 /* ENABLED SECONDARY BUTTON */
 /* secondary button */
 .btn-secondary {
-    background: rgb(244,244,244);
+    background: #ffffff;
     border: 0.125rem solid;
-    border-color: rgb(200,200,200);
+    border-color: #bdbdbd;
     border-radius: 0.1875rem;
     box-sizing: border-box;
     color: #5c5b5b;
