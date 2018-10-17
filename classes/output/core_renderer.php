@@ -110,7 +110,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         } else {
 
-            $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme')));
+            $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme'), 'target' => '_blank'));
 
             $course_page = $this->page->url;
             $stamp = html_writer::link($course_page, $img);
