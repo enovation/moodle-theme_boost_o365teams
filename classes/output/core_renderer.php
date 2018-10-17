@@ -100,20 +100,20 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $relativebaseurl = preg_replace('|^https?://|i', '//', $CFG->wwwroot);
             $relativefileurl = str_replace($relativebaseurl, '', $fileurl);
             $url = new moodle_url($relativefileurl);
-            $img = html_writer::empty_tag('img', array("src" => $url, 'target' => '_blank'));
+            $img = html_writer::empty_tag('img', array("src" => $url));
 
 
             $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img);
+            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
 
             return $stamp;
 
         } else {
 
-            $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme'), 'target' => '_blank'));
+            $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme')));
 
             $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img);
+            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
 
             return $stamp;
         }
