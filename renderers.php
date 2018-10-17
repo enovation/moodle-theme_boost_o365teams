@@ -1,7 +1,41 @@
 <?php
 
 require_once($CFG->dirroot . '/course/renderer.php');
+require_once($CFG->dirroot . '/mod/assign/renderer.php');
 
+class theme_boost_o365teams_mod_assign_renderer extends mod_assign_renderer {
+    /**
+     * Render the header.
+     *
+     * @param assign_header $header
+     * @return string
+     */
+    public function render_assign_header(assign_header $header) {
+        $o = '';
+
+        if ($header->subpage) {
+            $this->page->navbar->add($header->subpage);
+        }
+
+        $heading = format_string($header->assign->name, false, array('context' => $header->context));
+        $this->page->set_title($heading);
+        $this->page->set_heading($this->page->course->fullname);
+
+        $o .= $this->output->header();
+        if ($header->preface) {
+            $o .= $header->preface;
+        }
+
+        if ($header->showintro) {
+            $o .= $this->output->box_start('generalbox boxaligncenter', 'intro');
+            $o .= format_module_intro('assign', $header->assign, $header->coursemoduleid);
+            $o .= $header->postfix;
+            $o .= $this->output->box_end();
+        }
+
+        return $o;
+    }
+}
 
 class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
 
