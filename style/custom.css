@@ -512,3 +512,6 @@ header#page-header {
 .btn {
     font-size: 0.875rem;
 }
+.course-content ul.section {
+    padding-right: 0;
+}
