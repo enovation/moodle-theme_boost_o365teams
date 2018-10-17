@@ -513,5 +513,5 @@ header#page-header {
     font-size: 0.875rem;
 }
 .course-content ul.section {
-    padding-right: 0;
+    margin-right: 0;
 }
