@@ -257,26 +257,6 @@ div.teachereditlink {
     font-size:14px;
     width: unset;
 }
-div.teachereditlink a {
-    background-color: rgb(244,244,244);
-    padding: 8px;
-    border: 0.125rem solid;
-    border-color: #bdbdbd;
-    border-radius: 0.1875rem;
-    color: #5c5b5b;
-    cursor: pointer;
-}
-div.teachereditlink a:hover {
-    background-color: #bdbdbd;
-    text-decoration: none;
-    color: #252424;
-}
-div.teachereditlink a:active {
-    background-color: #929191;
-    text-decoration: none;
-    color: #252424;
-    border-color: transparent;
-}
 /** Teacher Edit Link END */
 /* header END */
 
