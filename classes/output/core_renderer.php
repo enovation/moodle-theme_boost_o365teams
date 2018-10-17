@@ -72,15 +72,18 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render_from_template('theme_boost_o365teams/edit_link', $linkobj);
     }
     public function user_link() {
-        global $USER;
+        global $USER, $OUTPUT;
         $profile_page_link = new moodle_url('/user/profile.php',
                 array('id' => $USER->id));
-        $user_details =  $USER->firstname .' '. $USER->lastname.' ('.$USER->username.')';
-
-        $user_profile = html_writer::link($profile_page_link, $user_details,
+        $profilepic =  $OUTPUT->user_picture($USER, array('size'=>26));
+        $user_details =  $USER->firstname.' '.$USER->lastname;
+        $piclink = html_writer::link($profile_page_link, $profilepic,
                 array('target' => '_blank', 'class' => 'user_details'));
+        $user_profile = html_writer::link($profile_page_link, $user_details,
+                array('target' => '_blank'));
 
-        return $user_profile;
+
+        return $piclink.$user_profile;
     }
 
     public function footer() {
@@ -93,6 +96,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
     function get_footer_stamp($maxwidth = 120, $maxheight = 60) {
         global $CFG, $PAGE, $OUTPUT;
+        $stamp="";
 
         if (!empty($PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp'))) {
             $fileurl = $PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp');
@@ -104,19 +108,17 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
 
             $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
-
-            return $stamp;
+            $stamp = html_writer::link($course_page, $img, array('target' => '_blank', 'class' => 'stamp'));
 
         } else {
 
             $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme')));
 
             $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img, array('target' => '_blank'));
+            $stamp = html_writer::link($course_page, $img, array('target' => '_blank', 'class' => 'stamp'));
 
-            return $stamp;
+
         }
-        return "";
+        return $stamp;
     }
 }

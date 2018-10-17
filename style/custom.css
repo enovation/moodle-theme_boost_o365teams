@@ -347,7 +347,7 @@ a{
     padding-top:10px;
     padding-bottom:10px;
 }
-.footerlogo img {
+.footerlogo .stamp img {
     float:right;
     padding-right:70px;
 }
