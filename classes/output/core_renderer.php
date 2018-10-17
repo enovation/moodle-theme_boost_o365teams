@@ -100,7 +100,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $relativebaseurl = preg_replace('|^https?://|i', '//', $CFG->wwwroot);
             $relativefileurl = str_replace($relativebaseurl, '', $fileurl);
             $url = new moodle_url($relativefileurl);
-            $img = html_writer::empty_tag('img', array("src" => $url));
+            $img = html_writer::empty_tag('img', array("src" => $url, 'target' => '_blank'));
 
 
             $course_page = $this->page->url;
