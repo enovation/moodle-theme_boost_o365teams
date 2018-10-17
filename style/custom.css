@@ -508,3 +508,7 @@ footer#page-footer {
 header#page-header {
     clear: both;
 }
+
+.btn {
+    font-size: 0.875rem;
+}
