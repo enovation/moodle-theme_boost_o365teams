@@ -75,15 +75,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
         global $USER, $OUTPUT;
         $profile_page_link = new moodle_url('/user/profile.php',
                 array('id' => $USER->id));
-        $profilepic =  $OUTPUT->user_picture($USER, array('size'=>26));
+        $profilepic =  $OUTPUT->user_picture($USER, array('size'=>26, 'target' => '_blank', 'class' => 'user_details'));
         $user_details =  $USER->firstname.' '.$USER->lastname;
-        $piclink = html_writer::link($profile_page_link, $profilepic,
-                array('target' => '_blank', 'class' => 'user_details'));
         $user_profile = html_writer::link($profile_page_link, $user_details,
                 array('target' => '_blank'));
 
-
-        return $piclink.$user_profile;
+        return $profilepic . $user_profile;
     }
 
     public function footer() {
