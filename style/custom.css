@@ -485,3 +485,6 @@ header#page-header {
 ul {
     padding-left: 0;
 }
+div.teachereditlink i.icon {
+    margin-right: 0;
+}
