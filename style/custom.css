@@ -295,6 +295,9 @@ a{
     float:left;
     position: static;
 }
+.section .activity .actions {
+    margin-right:4px;
+}
 .section .activity .activityinstance, .section .activity .activityinstance > a {
     float:left;
 }
