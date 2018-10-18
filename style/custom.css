@@ -84,6 +84,9 @@ form .felement input {
 .format-collapsibletopics.path-course-view .completionprogress {
     float: left;
 }
+.course-content ul.collapsibletopics li.section ul.section {
+    padding-left: 0px;
+}
 .format-collapsibletopics .section .activity {
     background-color: #fff;
     padding: 10px;
@@ -102,12 +105,12 @@ form .felement input {
 .format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle.collapsed ~ .section-summary-activities{
     display: none;
 }
-.format-collapsibletopics .expandall {
-    display: none;
-}
-.format-collapsibletopics #completionprogressid {
-    display: none;
-}
+/*.format-collapsibletopics .expandall {*/
+    /*display: none;*/
+/*}*/
+/*.format-collapsibletopics #completionprogressid {*/
+    /*display: none;*/
+/*}*/
 .format-collapsibletopics .availabilityinfo.ishidden {
     display: none;
 }
@@ -115,6 +118,9 @@ form .felement input {
 /* collapsable weeks format START */
 .format-collapsibleweeks.path-course-view .completionprogress {
     float: left;
+}
+.course-content ul.collapsibleweeks li.section ul.section {
+    padding-left: 0px;
 }
 .format-collapsibleweeks .section .activity {
     background-color: #fff;
