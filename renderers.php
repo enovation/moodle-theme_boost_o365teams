@@ -107,6 +107,8 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
             $output .= html_writer::start_tag('div', array('class' => 'activityinstance'));
             $output .= $cmname;
 
+            $popupicon = html_writer::empty_tag('img', array("src" => $this->image_url('popupicon', 'theme'),"class" => "popupicon"));
+            $output .= html_writer::link($mod->url, $popupicon, array("class"=>"popupiconlink"));
 
             // Module can put text after the link (e.g. forum unread)
             $output .= $mod->afterlink;
@@ -115,7 +117,6 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
             $output .= html_writer::end_tag('div'); // .activityinstance
         }
 
-        $output .= html_writer::empty_tag('img', array("src" => $this->image_url('popupicon', 'theme'),"class" => "popupicon"));
         // Show availability info (if module is not available).
         $output .= $this->course_section_cm_availability($mod, $displayoptions);
 

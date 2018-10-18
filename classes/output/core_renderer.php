@@ -88,6 +88,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $piclink . $userprofile;
     }
 
+
     public function footer() {
         $footer = parent::footer();
 

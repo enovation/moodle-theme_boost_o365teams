@@ -295,7 +295,7 @@ a{
     float:left;
     position: static;
 }
-.section .activity .activityinstance {
+.section .activity .activityinstance, .section .activity .activityinstance > a {
     float:left;
 }
 /* activity list END */
@@ -328,6 +328,10 @@ li.resource .popupicon{
     width: 16px;
     height: 21px;
     padding-top: 5px;
+
+}
+.section li.resource .popupiconlink {
+    padding-left: 0px;
 }
 /* popup icon END */
 
