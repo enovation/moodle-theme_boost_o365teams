@@ -327,7 +327,8 @@ a{
     display: none;
 }
 .popupicon_white {
-    width: 15px;
+    width: 20px;
+    vertical-align: top;
 }
 li.resource .popupicon{
     display: block;
