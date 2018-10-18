@@ -516,3 +516,10 @@ ul {
 div.teachereditlink i.icon {
     margin-right: 0;
 }
+#page-wrapper::after {
+    content: none;
+}
+#page-wrapper {
+    margin-bottom: 50px;
+}
+
