@@ -60,7 +60,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
             if (in_array($roleassignment->roleid, array($teacherrole->id, $noneditingteacherrole->id))) {
                 $editcourselink = new moodle_url('/course/view.php',
                     array('id' => $COURSE->id, 'edit' => 1, 'sesskey' => sesskey()));
-                $link = html_writer::link($editcourselink,  $OUTPUT->pix_icon('t/edit', 'editcourse', 'local_o365'),
+                $link = html_writer::link($editcourselink,  $OUTPUT->func('t/edit',
+                    get_string('editcourse', 'local_o365'), 'local_o365'),
                     array('target' => '_blank', 'class' => 'btn btn-primary'));
                 break;
             }
