@@ -48,7 +48,6 @@ form .felement input {
     margin-top: 2px;
 }
 .format-topics .sectionname {
-    padding-left: 32px;
     font-size: 1em;
 }
 .format-topics #completionprogressid {
@@ -72,7 +71,6 @@ form .felement input {
     margin-top: 2px;
 }
 .format-weeks .weeks .sectionname {
-    padding-left: 32px;
     font-size: 1em;
 }
 .format-weeks .course-content .current::before {
@@ -166,7 +164,6 @@ form .felement input {
 /* section page */
 .format-topics .single-section h3.sectionname {
     text-align: unset;
-    padding-left: 28px;
     font-size: 1em;
 }
 .format-topics .course-content .single-section .section-navigation .mdl-right,
@@ -191,7 +188,6 @@ form .felement input {
 /* section page */
 .format-weeks .single-section h3.sectionname {
     text-align: unset;
-    padding-left: 28px;
     font-size: 1em;
 }
 /*.format-weeks .course-content .single-section .section-navigation .mdl-right,*/
