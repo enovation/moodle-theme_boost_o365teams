@@ -481,7 +481,7 @@ header#page-header {
     font-size: 0.875rem;
 }
 .course-content ul.section {
-    margin-right: 0;
+    margin-right: 0 !important;
 }
 .path-course-view .completionprogress {
     margin-left: 0;
