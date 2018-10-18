@@ -75,7 +75,7 @@
                             {{/hasregionmainsettingsmenu}}
                             {{{ output.course_content_header }}}
                             <div id="course_page_title">
-                            {{{ output.edit_link }}}
+                            {{{ output.course_link }}}
                                {{#is_course_overview}}
                                   <div class="back_course_main"><a href="{{{course_page}}}">< Course Overview</a></div>
                                {{/is_course_overview}}
@@ -102,6 +102,7 @@
 </div>
 <div class="footerlogo">
     {{{ output.user_link }}}
+    {{{ output.feedback_link }}}
     {{{ output.get_footer_stamp }}}
 </div>
 {{> theme_boost/footer }}

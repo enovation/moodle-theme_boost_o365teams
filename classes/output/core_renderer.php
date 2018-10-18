@@ -38,6 +38,13 @@ use pix_icon;
 defined('MOODLE_INTERNAL') || die;
 
 class core_renderer extends \theme_boost\output\core_renderer {
+    /**
+     * Return header html.
+     * The header section includes custom content security policy setting, as well as reference to Microsoft teams JS
+     * lib.
+     *
+     * @return string
+     */
     public function standard_head_html() {
         $output = parent::standard_head_html();
 
@@ -47,7 +54,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $output;
     }
 
-    public function edit_link() {
+    /**
+     * Return HTML for buttons to open the course page in external browser tab.
+     *
+     * @return bool|string
+     * @throws \dml_exception
+     * @throws \moodle_exception
+     * @throws coding_exception
+     */
+    public function course_link() {
         global $DB, $COURSE, $OUTPUT;
 
         $coursecontext = context_course::instance($COURSE->id);
@@ -77,9 +92,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $linkobj = new stdClass();
         $linkobj->teachereditlink = $link;
 
-        return $this->render_from_template('theme_boost_o365teams/edit_link', $linkobj);
+        return $this->render_from_template('theme_boost_o365teams/course_link', $linkobj);
     }
 
+    /**
+     * Return HTML that shows logged in user link.
+     *
+     * @return string
+     * @throws \moodle_exception
+     */
     public function user_link() {
         global $USER, $OUTPUT;
 
@@ -95,7 +116,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $piclink . $userprofile;
     }
 
-
+    /**
+     * Return page footer.
+     * Page footer contains JS calls to microsoft Teams JS lib.
+     *
+     * @return string
+     */
     public function footer() {
         $footer = parent::footer();
 
@@ -104,9 +130,38 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         return $footer;
     }
+
+    /**
+     * Return HTML for feedback link.
+     *
+     * @return string
+     * @throws \dml_exception
+     * @throws coding_exception
+     */
+    public function feedback_link() {
+        $feedbacklink = '';
+
+        $feedbacklinksetting = get_config('theme_boost_o365teams', 'feedbackurl');
+        if ($feedbacklinksetting) {
+            $feedbacklink = html_writer::link($feedbacklinksetting,
+                get_string('send_feedback', 'theme_boost_o365teams'), array('class' => 'btn btn-primary'));
+        }
+
+        return $feedbacklink;
+    }
+
+    /**
+     * Return page footer stamp.
+     * Stamp is from user upload in theme settings, or Moodle logo if not uploaded.
+     *
+     * @param int $maxwidth
+     * @param int $maxheight
+     *
+     * @return string
+     * @throws \moodle_exception
+     */
     function get_footer_stamp($maxwidth = 120, $maxheight = 60) {
         global $CFG, $PAGE, $OUTPUT;
-        $stamp="";
 
         if (!empty($PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp'))) {
             $fileurl = $PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp');
@@ -116,19 +171,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $url = new moodle_url($relativefileurl);
             $img = html_writer::empty_tag('img', array("src" => $url));
 
-
-            $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img, array('target' => '_blank', 'class' => 'stamp'));
-
+            $coursepageurl = $this->page->url;
+            $stamp = html_writer::link($coursepageurl, $img, array('target' => '_blank', 'class' => 'stamp'));
         } else {
-
             $img = html_writer::empty_tag('img', array("src" => $OUTPUT->image_url('moodlelogo', 'theme')));
 
-            $course_page = $this->page->url;
-            $stamp = html_writer::link($course_page, $img, array('target' => '_blank', 'class' => 'stamp'));
-
-
+            $coursepageurl = $this->page->url;
+            $stamp = html_writer::link($coursepageurl, $img, array('target' => '_blank', 'class' => 'stamp'));
         }
+
         return $stamp;
     }
 }
