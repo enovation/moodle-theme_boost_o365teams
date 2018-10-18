@@ -67,6 +67,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
             }
         }
 
+        if (!$link) {
+            $courselink = new moodle_url('/course/view.php', array('id' => $COURSE->id));
+            $link = html_writer::link($courselink, html_writer::empty_tag('img',
+                array('src' => $this->image_url('popupicon', 'theme'), 'class' => 'popupicon')),
+                array('target' => '_blank', 'class' => 'btn btn-primary'));
+        }
+
         $linkobj = new stdClass();
         $linkobj->teachereditlink = $link;
 
