@@ -318,10 +318,10 @@ a{
 }
 .footerlogo .stamp img {
     float:right;
-    padding-right:70px;
+    padding-right:40px;
 }
 .user_details {
-    margin-left: 70px;
+    margin-left: 40px;
     color: black;
 }
 /* footer END */
