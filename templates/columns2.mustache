@@ -101,9 +101,13 @@
     {{> theme_boost/nav-drawer }}
 </div>
 <div class="footerlogo">
-    {{{ output.user_link }}}
-    {{{ output.feedback_link }}}
-    {{{ output.get_footer_stamp }}}
+    <div class="footerleft">
+        {{{ output.user_link }}}
+    </div>
+    <div class="footerright">
+        {{{ output.feedback_link }}}
+        {{{ output.get_footer_stamp }}}
+    </div>
 </div>
 {{> theme_boost/footer }}
 

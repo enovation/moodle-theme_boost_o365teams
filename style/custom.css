@@ -321,6 +321,17 @@ a{
     margin-left: 40px;
     color: black;
 }
+div.footerleft {
+    display: inline;
+    float: left;
+}
+div.footerright {
+    display: inline;
+    float: right;
+}
+a.feedbacklink {
+    margin-right: 20px;
+}
 /* footer END */
 /* popup icon START */
 .popupicon {
