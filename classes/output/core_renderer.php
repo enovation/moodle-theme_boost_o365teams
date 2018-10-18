@@ -48,7 +48,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
     public function edit_link() {
-        global $DB, $COURSE;
+        global $DB, $COURSE, $OUTPUT;
 
         $coursecontext = context_course::instance($COURSE->id);
         $roleassignments = get_user_roles($coursecontext);
@@ -60,7 +60,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             if (in_array($roleassignment->roleid, array($teacherrole->id, $noneditingteacherrole->id))) {
                 $editcourselink = new moodle_url('/course/view.php',
                     array('id' => $COURSE->id, 'edit' => 1, 'sesskey' => sesskey()));
-                $link = html_writer::link($editcourselink, get_string('editcourse', 'theme_boost_o365teams'),
+                $link = html_writer::link($editcourselink,  $OUTPUT->pix_icon('t/edit', 'editcourse', 'local_o365'),
                     array('target' => '_blank', 'class' => 'btn btn-primary'));
                 break;
             }
