@@ -520,6 +520,6 @@ div.teachereditlink i.icon {
     content: none;
 }
 #page-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 
