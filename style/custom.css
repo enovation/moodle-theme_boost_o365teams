@@ -40,7 +40,6 @@ form .felement input {
 /* topics format START */
 .format-topics.path-course-view .completionprogress {
     float: left;
-    margin-left: 32px;
 }
 .format-topics .section .activity {
     background-color: #fff;
@@ -65,7 +64,6 @@ form .felement input {
 /* weeks format START */
 .format-weeks.path-course-view .completionprogress {
     float: left;
-    margin-left: 32px;
 }
 .format-weeks .weeks .section .activity{
     background-color: #fff;
@@ -87,7 +85,6 @@ form .felement input {
 /* collapsable topics format START */
 .format-collapsibletopics.path-course-view .completionprogress {
     float: left;
-    margin-left: 32px;
 }
 .format-collapsibletopics .section .activity {
     background-color: #fff;
@@ -100,12 +97,8 @@ form .felement input {
     color: #000;
 }
 .format-collapsibletopics .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="true"], .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="false"] {
-    margin-left: 32px;
     background-size: 13px 13px;
     font-size: 0.8rem;
-}
-.format-collapsibletopics .course-content ul.collapsibletopics li.section ul.section {
-    padding-left: 1rem;
 }
 .format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle ~ .section-summary-activities,
 .format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle.collapsed ~ .section-summary-activities{
@@ -124,7 +117,6 @@ form .felement input {
 /* collapsable weeks format START */
 .format-collapsibleweeks.path-course-view .completionprogress {
     float: left;
-    margin-left: 32px;
 }
 .format-collapsibleweeks .section .activity {
     background-color: #fff;
@@ -132,12 +124,9 @@ form .felement input {
     padding-left: 20px;
     margin-top: 2px;
 }
-.format-collapsibleweeks .course-content ul.collapsibleweeks li.section ul.section {
-    padding-left: 1rem;
-}
+
 .format-collapsibleweeks .course-content ul.collapsibleweeks a.sectiontoggle[aria-expanded="true"],
 .format-collapsibleweeks .course-content ul.collapsibleweeks a.sectiontoggle[aria-expanded="false"] {
-    margin-left: 32px;
     background-size: 13px 13px;
     font-size: 0.8rem;
 }
@@ -227,7 +216,6 @@ form .felement input {
 /* header START */
 body #course_page_title {
     position: relative;
-    margin-left: 32px;
     background-color: #fff;
     border-left: 8px #fc852c solid;
     font-size: 2.4em;
@@ -494,4 +482,8 @@ header#page-header {
 }
 .course-content ul.section {
     margin-right: 0;
+}
+.path-course-view .completionprogress {
+    margin-left: 0;
+    margin-top: 20px;
 }
