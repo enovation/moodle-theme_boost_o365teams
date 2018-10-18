@@ -155,7 +155,6 @@ form .felement input {
     border: 0;
 }
 .format-topics .course-content .topics .section-summary .section-title {
-    padding-left: 32px;
     margin: 0;
 }
 .format-topics .course-content ul.topics .section-summary-activities {
@@ -179,7 +178,6 @@ form .felement input {
     border: 0;
 }
 .format-weeks .course-content .weeks .section-summary .section-title {
-    padding-left: 32px;
     margin: 0;
 }
 /*.format-weeks .course-content ul.weeks .section-summary-activities {*/
