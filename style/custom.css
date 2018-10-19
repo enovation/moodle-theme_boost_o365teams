@@ -358,32 +358,10 @@ a.feedbacklink {
 .popupicon {
     display: none;
 }
-.popupicon_white {
-    width: 20px;
-    vertical-align: top;
-}
 li.resource .popupicon{
-    display: inline;
-    width: 16px;
-    height: 21px;
-    padding-top: 5px;
-    vertical-align: top;
-
-}
-.section li.resource .popupiconlink {
-    padding-left: 0px;
+    margin-left: 4px;
 }
 /* popup icon END */
-
-
-
-
-
-
-
-
-
-
 
 /* ALL BUTTONS */
 button {
@@ -488,9 +466,6 @@ div.disabled .btn-secondary {
 /* primary button :focus*/
 .btn-primary:focus, .btn-primary:focus:enabled, .btn-default:focus, .btn-default:focus:enabled {
 }
-
-
-
 
 body {
     display: none;
