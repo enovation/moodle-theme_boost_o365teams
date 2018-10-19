@@ -214,21 +214,12 @@ form .felement input {
 
 
 /* header START */
-body #course_page_title {
+#course_page_title {
     position: relative;
     background-color: #fff;
     border-left: 8px #fc852c solid;
     font-size: 28px;
     padding-left: 40px;
-    height: 140px;
-}
-body .no_back #course_page_title {
-    position: relative;
-    background-color: #fff;
-    border-left: 8px #fc852c solid;
-    font-size: 28px;
-    padding-left: 40px;
-    height: unset;
 }
 body .back_course_main {
     position: relative;
@@ -237,32 +228,27 @@ body .back_course_main {
     padding-left: 6px;
     padding-top: 18px;
 }
-.no_back #course_page_title .page_title {
-    padding-bottom: 28px;
-    padding-top: 28px;
+.back #course_page_title .page_title a {
+    padding-right: 33px;
 }
-.page_title {
+#course_page_title .page_title {
     padding-bottom: 20px;
     padding-top: 28px;
 }
 .page_title a:active, .page_title a:hover {
     text-decoration:none;
 }
-@media (max-width:900px) and (min-width:660px){
+@media (max-width:800px){
     body #course_page_title {
         font-size: 21px;
     }
 }
-@media (max-width:660px) and (min-width:560px){
+@media (max-width:640px) {
     body #course_page_title {
         font-size: 17px;
     }
 }
-@media (max-width:560px){
-    body #course_page_title {
-        font-size: 15px;
-    }
-}
+
 /** Teacher Edit Link START */
 div.teachereditlink {
     position: relative;

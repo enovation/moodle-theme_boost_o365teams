@@ -75,11 +75,13 @@
                             {{/hasregionmainsettingsmenu}}
                             {{#is_course_overview}}
                                {{{ output.course_content_header }}}
+                               <span class="back">
                                <div id="course_page_title">
                                   {{{ output.course_link }}}
                                   <div class="back_course_main"><a href="{{{course_page}}}">< Course Overview</a></div>
                                   <div class="page_title"><a href="{{{ course_page }}}">{{{ output.page_title }}}</a></div>
                                </div>
+                               </span>
                             {{/is_course_overview}}
                             {{^is_course_overview}}
                                {{{ output.course_content_header }}}
