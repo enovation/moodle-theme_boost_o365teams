@@ -352,6 +352,9 @@ div.footerright {
 }
 a.feedbacklink {
     margin-right: 20px;
+    margin-top: 5px;
+    font-size: 25px;
+    color: #484644;
 }
 /* footer END */
 /* popup icon START */
