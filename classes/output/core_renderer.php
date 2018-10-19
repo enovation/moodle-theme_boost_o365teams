@@ -77,7 +77,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                     array('id' => $COURSE->id, 'edit' => 1, 'sesskey' => sesskey()));
                 $link = html_writer::link($editcourselink,
                     '',
-                    array('target' => '_blank', 'class' => 'editcourseicon'));
+                    array('target' => '_blank', 'class' => 'editcourseicon fa fa-pencil-square-o'));
                 break;
             }
         }
@@ -85,7 +85,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (!$link) {
             $courselink = new moodle_url('/course/view.php', array('id' => $COURSE->id));
             $link = html_writer::link($courselink, '',
-                array('target' => '_blank', 'class' => 'viewcourseicon'));
+                array('target' => '_blank', 'class' => 'viewcourseicon fa fa-external-link'));
         }
 
         $linkobj = new stdClass();
