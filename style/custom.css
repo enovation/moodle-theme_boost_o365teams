@@ -529,3 +529,9 @@ a.editcourseicon::after {
     font-family: 'FontAwesome';
     font-size: 20px;
 }
+a.viewcourseicon::after {
+    content: "";
+    color: #484644;
+    font-family: 'FontAwesome';
+    font-size: 20px;
+}
