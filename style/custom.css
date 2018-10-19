@@ -220,16 +220,29 @@ body #course_page_title {
     border-left: 8px #fc852c solid;
     font-size: 28px;
     padding-left: 40px;
+    height: 140px;
+}
+body #course_page_title_no_back {
+    position: relative;
+    background-color: #fff;
+    border-left: 8px #fc852c solid;
+    font-size: 28px;
+    padding-left: 40px;
 }
 body .back_course_main {
     position: relative;
     display: block;
     font-size: 16px;
     padding-left: 6px;
+    padding-top: 18px;
+}
+#course_page_title_no_back .page_title {
+    padding-bottom: 26px;
+    padding-top: 26px;
 }
 .page_title {
     padding-bottom: 20px;
-    padding-top: 10px;
+    padding-top: 28px;
 }
 .page_title a:active, .page_title a:hover {
     text-decoration:none;

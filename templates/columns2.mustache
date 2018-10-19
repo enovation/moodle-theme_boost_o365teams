@@ -73,17 +73,21 @@
                             {{#hasregionmainsettingsmenu}}
                                 <div class="region_main_settings_menu_proxy"></div>
                             {{/hasregionmainsettingsmenu}}
-                            {{{ output.course_content_header }}}
-                            <div id="course_page_title">
-                            {{{ output.course_link }}}
-                               {{#is_course_overview}}
+                            {{#is_course_overview}}
+                               {{{ output.course_content_header }}}
+                               <div id="course_page_title">
+                                  {{{ output.course_link }}}
                                   <div class="back_course_main"><a href="{{{course_page}}}">< Course Overview</a></div>
-                               {{/is_course_overview}}
-                               {{^is_course_overview}}
-                                  <div class="back_course_main">&nbsp; </div>
-                               {{/is_course_overview}}
-                               <div class="page_title"><a href="{{{ course_page }}}">{{{ output.page_title }}}</a></div>
-                            </div>
+                                  <div class="page_title"><a href="{{{ course_page }}}">{{{ output.page_title }}}</a></div>
+                               </div>
+                            {{/is_course_overview}}
+                            {{^is_course_overview}}
+                               {{{ output.course_content_header }}}
+                               <div id="course_page_title_no_back">
+                                  {{{ output.course_link }}}
+                                  <div class="page_title"><a href="{{{ course_page }}}">{{{ output.page_title }}}</a></div>
+                               </div>
+                            {{/is_course_overview}}
                             {{{ output.main_content }}}
                             {{{ output.activity_navigation }}}
                             {{{ output.course_content_footer }}}
