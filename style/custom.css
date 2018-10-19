@@ -208,7 +208,10 @@ form .felement input {
 
 /*!* modules START *!*/
 .path-mod .card-body div[role="main"] {
-    margin-left:32px;
+    margin-left:48px;
+}
+#prev-activity-link {
+    margin-left:48px;
 }
 /*!* modules END *!*/
 
