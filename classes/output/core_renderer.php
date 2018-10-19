@@ -76,8 +76,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 $editcourselink = new moodle_url('/course/view.php',
                     array('id' => $COURSE->id, 'edit' => 1, 'sesskey' => sesskey()));
                 $link = html_writer::link($editcourselink,
-                    $OUTPUT->pix_icon('t/editinline', get_string('editcourse', 'theme_boost_o365teams')),
-                    array('target' => '_blank', 'class' => 'btn btn-primary'));
+                    '',
+                    array('target' => '_blank', 'class' => 'editcourseicon'));
                 break;
             }
         }

@@ -523,4 +523,7 @@ div.teachereditlink i.icon {
 #page-wrapper {
     margin-bottom: 50px !important;
 }
-
+.editcourseicon {
+    content: "";
+    color: #484644;
+}
