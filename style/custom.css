@@ -218,7 +218,7 @@ body #course_page_title {
     position: relative;
     background-color: #fff;
     border-left: 8px #fc852c solid;
-    font-size: 2.4em;
+    font-size: 28px;
     padding-left: 40px;
 }
 body .back_course_main {
@@ -244,6 +244,21 @@ div.teachereditlink {
     margin-right: 13px;
     font-size: 14px;
     width: unset;
+}
+@media (max-width:900px) and (min-width:660px){
+    body #course_page_title {
+        font-size: 21px;
+    }
+}
+@media (max-width:660px) and (min-width:560px){
+    body #course_page_title {
+        font-size: 17px;
+    }
+}
+@media (max-width:560px){
+    body #course_page_title {
+        font-size: 14px;
+    }
 }
 /** Teacher Edit Link END */
 /* header END */
