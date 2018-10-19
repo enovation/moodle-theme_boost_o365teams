@@ -63,7 +63,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @throws coding_exception
      */
     public function course_link() {
-        global $DB, $COURSE, $OUTPUT;
+        global $DB, $COURSE;
 
         $coursecontext = context_course::instance($COURSE->id);
         $roleassignments = get_user_roles($coursecontext);
@@ -75,9 +75,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
             if (in_array($roleassignment->roleid, array($teacherrole->id, $noneditingteacherrole->id))) {
                 $editcourselink = new moodle_url('/course/view.php',
                     array('id' => $COURSE->id, 'edit' => 1, 'sesskey' => sesskey()));
-                $link = html_writer::link($editcourselink,
-                    '',
-                    array('target' => '_blank', 'class' => 'editcourseicon fa fa-pencil-square-o'));
+                $link = html_writer::link($editcourselink, '',
+                    array('target' => '_blank', 'class' => 'editcourseicon fa fa-pencil-square-o',
+                        'title' => get_string('edit_course', 'theme_boost_o365teams')));
                 break;
             }
         }
@@ -85,7 +85,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if (!$link) {
             $courselink = new moodle_url('/course/view.php', array('id' => $COURSE->id));
             $link = html_writer::link($courselink, '',
-                array('target' => '_blank', 'class' => 'viewcourseicon fa fa-external-link'));
+                array('target' => '_blank', 'class' => 'viewcourseicon fa fa-external-link',
+                    'title' => get_string('open_course', 'theme_boost_o365teams')));
         }
 
         $linkobj = new stdClass();
@@ -145,7 +146,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $feedbacklink = html_writer::link($feedbacklinksetting,
                 html_writer::tag('span', '', array('class' => 'fa fa-lightbulb-o')),
                 array('target' => '_blank', 'class' => 'feedbacklink',
-                    'alt' => get_string('send_feedback', 'theme_boost_o365teams')));
+                    'title' => get_string('share_feedback', 'theme_boost_o365teams')));
         }
 
         return $feedbacklink;

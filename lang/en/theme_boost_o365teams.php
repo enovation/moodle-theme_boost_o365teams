@@ -33,6 +33,8 @@ $string['editcourse'] = 'Edit course';
 $string['footer_stamp_title'] = "Tabs Footer Stamp";
 $string['footer_stamp_desc'] = "Displays Image or logo at bottom right of tabs.<br/>(Max-Height: 60px)";
 
-$string['send_feedback'] = 'Share feedback';
+$string['share_feedback'] = 'Share feedback';
 $string['setting_feedbackurl'] = 'Send feedback URL';
 $string['setting_feedbackurl_desc'] = 'If configured, a link will show in tab footer to allow users to send feedback.';
+$string['edit_course'] = 'Edit course in browser window';
+$string['open_course'] = 'Ope course in browser window';
