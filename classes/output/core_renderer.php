@@ -143,8 +143,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $feedbacklinksetting = get_config('theme_boost_o365teams', 'feedbackurl');
         if ($feedbacklinksetting) {
             $feedbacklink = html_writer::link($feedbacklinksetting,
-                get_string('send_feedback', 'theme_boost_o365teams'),
-                array('target' => '_blank', 'class' => 'btn btn-primary feedbacklink'));
+                html_writer::tag('span', '', array('class' => 'fa fa-lightbulb-o')),
+                array('target' => '_blank', 'class' => 'feedbacklink',
+                    'alt' => get_string('send_feedback', 'theme_boost_o365teams')));
         }
 
         return $feedbacklink;
