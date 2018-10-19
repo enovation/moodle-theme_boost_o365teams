@@ -523,8 +523,9 @@ div.teachereditlink i.icon {
 #page-wrapper {
     margin-bottom: 50px !important;
 }
-.editcourseicon {
+a.editcourseicon::after {
     content: "";
     color: #484644;
     font-family: 'FontAwesome';
+    font-size: 20px;
 }
