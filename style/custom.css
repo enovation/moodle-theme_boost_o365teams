@@ -289,17 +289,21 @@ div.teachereditlink {
 
 
 
-
-
-
-/* course body START */
 .card-body {
-    background-color: #ffffff;
+    background-color: #f3f2f1;
 }
+
 body {
     background-color: #f3f2f1;
     font-size: 0.875rem;
 }
+
+/* course body START */
+.pagelayout-incourse .card-body {
+    background-color: #ffffff;
+}
+
+
 .course-content ul li.section.main {
     border-bottom: 0;
 }
