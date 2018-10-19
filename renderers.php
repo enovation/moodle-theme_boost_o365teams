@@ -98,7 +98,6 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
         if (!empty($modicons)) {
             $output .= html_writer::span($modicons, 'actions');
         }
-
         // Display the link to the module (or do nothing if module has no url)
         $cmname = $this->course_section_cm_name($mod, $displayoptions);
 
@@ -106,9 +105,6 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
             // Start the div for the activity title, excluding the edit icons.
             $output .= html_writer::start_tag('div', array('class' => 'activityinstance'));
             $output .= $cmname;
-
-            $popupicon = html_writer::empty_tag('img', array("src" => $this->image_url('popupicon', 'theme'),"class" => "popupicon"));
-            $output .= html_writer::link($mod->url, $popupicon, array("class"=>"popupiconlink"));
 
             // Module can put text after the link (e.g. forum unread)
             $output .= $mod->afterlink;
@@ -132,6 +128,50 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
         $output .= html_writer::end_tag('div');
 
         $output .= html_writer::end_tag('div');
+        return $output;
+    }
+
+    public function course_section_cm_name_title(cm_info $mod, $displayoptions = array()) {
+        $output = '';
+        $url = $mod->url;
+        if (!$mod->is_visible_on_course_page() || !$url) {
+            // Nothing to be displayed to the user.
+            return $output;
+        }
+
+        //Accessibility: for files get description via icon, this is very ugly hack!
+        $instancename = $mod->get_formatted_name();
+        $altname = $mod->modfullname;
+        // Avoid unnecessary duplication: if e.g. a forum name already
+        // includes the word forum (or Forum, etc) then it is unhelpful
+        // to include that in the accessible description that is added.
+        if (false !== strpos(core_text::strtolower($instancename),
+                        core_text::strtolower($altname))) {
+            $altname = '';
+        }
+        // File type after name, for alphabetic lists (screen reader).
+        if ($altname) {
+            $altname = get_accesshide(' '.$altname);
+        }
+
+        list($linkclasses, $textclasses) = $this->course_section_cm_classes($mod);
+
+        // Get on-click attribute value if specified and decode the onclick - it
+        // has already been encoded for display (puke).
+        $onclick = htmlspecialchars_decode($mod->onclick, ENT_QUOTES);
+
+        // Display link itself.
+        $activitylink = html_writer::empty_tag('img', array('src' => $mod->get_icon_url(),
+                        'class' => 'iconlarge activityicon', 'alt' => ' ', 'role' => 'presentation')) .
+                html_writer::tag('span', $instancename . $altname, array('class' => 'instancename')).
+                html_writer::empty_tag('img', array("src" => $this->image_url('popupicon', 'theme'),"class" => "popupicon"));
+        if ($mod->uservisible) {
+            $output .= html_writer::link($url, $activitylink, array('class' => $linkclasses, 'onclick' => $onclick));
+        } else {
+            // We may be displaying this just in order to show information
+            // about visibility, without the actual link ($mod->is_visible_on_course_page()).
+            $output .= html_writer::tag('div', $activitylink, array('class' => $textclasses));
+        }
         return $output;
     }
 }

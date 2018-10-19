@@ -348,10 +348,11 @@ a.feedbacklink {
     vertical-align: top;
 }
 li.resource .popupicon{
-    display: block;
+    display: inline;
     width: 16px;
     height: 21px;
     padding-top: 5px;
+    vertical-align: top;
 
 }
 .section li.resource .popupiconlink {
