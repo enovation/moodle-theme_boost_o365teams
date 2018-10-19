@@ -164,7 +164,7 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
         $activitylink = html_writer::empty_tag('img', array('src' => $mod->get_icon_url(), 
                 'class' => 'iconlarge activityicon', 'alt' => ' ', 'role' => 'presentation')) .
                 html_writer::tag('span', $instancename . $altname, array('class' => 'instancename')) .
-                html_writer::empty_tag('i', array('class' => 'fa fa-external-link popupicon'));
+                html_writer::tag('span', '', array('class' => 'fa fa-external-link popupicon'));
         if ($mod->uservisible) {
             $output .= html_writer::link($url, $activitylink, array('class' => $linkclasses, 'onclick' => $onclick));
         } else {
