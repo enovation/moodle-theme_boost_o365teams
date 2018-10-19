@@ -83,10 +83,12 @@
                             {{/is_course_overview}}
                             {{^is_course_overview}}
                                {{{ output.course_content_header }}}
-                               <div id="course_page_title_no_back">
+                               <span class="no_back">
+                               <div id="course_page_title">
                                   {{{ output.course_link }}}
                                   <div class="page_title"><a href="{{{ course_page }}}">{{{ output.page_title }}}</a></div>
                                </div>
+                               </span>
                             {{/is_course_overview}}
                             {{{ output.main_content }}}
                             {{{ output.activity_navigation }}}
