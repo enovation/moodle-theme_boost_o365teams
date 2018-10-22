@@ -410,7 +410,7 @@ a.feedbacklink {
     color: #484644;
 }
 .fa-lightbulb-o {
-    font-family: "FontAwesome";
+    font-family: "FontAwesome" !important;
     font-size: 15px;
     border-radius: 5px;
 }
