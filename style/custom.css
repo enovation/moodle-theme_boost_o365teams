@@ -327,6 +327,7 @@ div.teachereditlink {
 body {
     background-color: #f3f2f1;
     font-size: 0.875rem;
+    color: #484644;
 }
 #region-main-box {
     padding-right: 0;
@@ -359,7 +360,7 @@ body {
 
 
 a{
-    color: #000;
+    color: #484644;
 }
 /* course body END */
 
