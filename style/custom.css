@@ -332,6 +332,7 @@ body {
 }
 .pagelayout-incourse .card-body div[role="main"] {
     border-top: solid 2px #f3f2f1;
+    padding-right: 0px;
 }
 .course-content ul li.section.main {
     border-bottom: 0;
