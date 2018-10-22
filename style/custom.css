@@ -411,8 +411,8 @@ a.feedbacklink {
 }
 .fa-lightbulb-o {
     font-family: "FontAwesome" !important;
-    font-size: 15px;
-    border-radius: 5px;
+    font-size: 15px !important;
+    border-radius: 5px !important;
 }
 .fa-lightbulb-o:before {
     padding: 5px;
