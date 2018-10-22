@@ -104,16 +104,21 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function user_link() {
         global $USER, $OUTPUT;
 
-        $profilepagelink = new moodle_url('/user/profile.php',
-                array('id' => $USER->id));
-        $profilepic = $OUTPUT->user_picture($USER, array('size'=>26, 'link' => false));
-        $userfullname = fullname($USER);
-        $piclink = html_writer::link($profilepagelink, $profilepic,
-                array('target' => '_blank', 'class' => 'user_details'));
-        $userprofile = html_writer::link($profilepagelink, $userfullname,
-                array('target' => '_blank'));
+        if(!empty($USER->id)) {
 
-        return $piclink . $userprofile;
+            $profilepagelink = new moodle_url('/user/profile.php',
+                    array('id' => $USER->id));
+            $profilepic = $OUTPUT->user_picture($USER, array('size'=>26, 'link' => false));
+            $userfullname = fullname($USER);
+            $piclink = html_writer::link($profilepagelink, $profilepic,
+                    array('target' => '_blank', 'class' => 'user_details'));
+            $userprofile = html_writer::link($profilepagelink, $userfullname,
+                    array('target' => '_blank'));
+
+            return $piclink . $userprofile;
+        } else{
+            return "";
+        }
     }
 
     /**

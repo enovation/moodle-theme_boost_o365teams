@@ -208,6 +208,7 @@ form .felement input {
 
 /*!* modules START *!*/
 .path-mod .card-body div[role="main"] {
+    padding-right:15px;
     padding-left:48px;
 }
 
