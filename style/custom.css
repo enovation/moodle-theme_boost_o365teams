@@ -320,7 +320,9 @@ body {
     background-color: #f3f2f1;
     font-size: 0.875rem;
 }
-
+#region-main-box {
+    margin-right: 0;
+}
 /* course body START */
 .pagelayout-incourse .card-body {
     background-color: #ffffff;
