@@ -33,11 +33,7 @@ define(['jquery'], function ($) {
                 $('.modtype_quiz .activityinstance a').click(function() {
                     $(this).attr('target', '_self');
                 });
-                $('.modtype_forum .activityinstance a').click(function() {
-                    $(this).attr('target', '_self');
-                });
             }
-
             $("body").fadeIn(150);
         }
     }

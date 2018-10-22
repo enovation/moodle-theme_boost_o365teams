@@ -194,6 +194,9 @@ form .felement input {
     text-align: unset;
     font-size: 1em;
 }
+format-weeks .course-content .single-section .section-navigation {
+    margin-bottom: 0;
+}
 /*.format-weeks .course-content .single-section .section-navigation .mdl-right,*/
 /*.format-weeks .course-content .single-section .section-navigation .mdl-left {*/
 /*display:none;*/
@@ -405,7 +408,7 @@ a.feedbacklink {
 /* footer END */
 /* popup icon START */
 
-.modtype_assign .popupicon, .modtype_quiz .popupicon, .modtype_forum .popupicon {
+.modtype_assign .popupicon, .modtype_quiz .popupicon {
     display: none;
 }
 .popupicon {
