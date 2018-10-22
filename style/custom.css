@@ -404,10 +404,11 @@ a.feedbacklink {
 }
 /* footer END */
 /* popup icon START */
-.popupicon {
+
+.modtype_assign .popupicon, .modtype_quiz .popupicon, .modtype_forum .popupicon {
     display: none;
 }
-li.resource .popupicon{
+.popupicon {
     margin-left: 4px;
     display: inline;
 }
