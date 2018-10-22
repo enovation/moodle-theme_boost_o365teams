@@ -321,7 +321,7 @@ body {
     font-size: 0.875rem;
 }
 #region-main-box {
-    margin-right: 0;
+    padding-right: 0;
 }
 /* course body START */
 .pagelayout-incourse .card-body {
