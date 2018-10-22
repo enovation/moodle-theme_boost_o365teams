@@ -208,8 +208,9 @@ form .felement input {
 
 /*!* modules START *!*/
 .path-mod .card-body div[role="main"] {
-    margin-left:48px;
+    padding-left:48px;
 }
+
 #prev-activity-link {
     margin-left:48px;
 }
@@ -322,19 +323,28 @@ body {
 }
 #region-main-box {
     padding-right: 0;
+    padding-left: 0;
 }
 /* course body START */
 .pagelayout-incourse .card-body {
     background-color: #ffffff;
 }
-
-
+.pagelayout-incourse .card-body div[role="main"] {
+    border-top: solid 2px #f3f2f1;
+}
 .course-content ul li.section.main {
     border-bottom: 0;
 }
 #region-main .card {
     border: 0;
 }
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+
 
 a{
     color: #000;
