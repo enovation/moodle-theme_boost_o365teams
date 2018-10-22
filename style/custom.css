@@ -409,6 +409,14 @@ a.feedbacklink {
     font-size: 25px;
     color: #484644;
 }
+.fa-lightbulb-o {
+    font-family: "FontAwesome";
+    font-size: 15px;
+    border-radius: 5px;
+}
+.fa-lightbulb-o:before {
+    padding: 5px;
+}
 /* footer END */
 /* popup icon START */
 
@@ -587,9 +595,3 @@ a.viewcourseicon {
     color: #484644;
 }
 /* Assignment Module END */
-
-.fa-lightbulb-o {
-    font-family: "FontAwesome";
-    font-size: 15px;
-    border-radius: 5px;
-}
