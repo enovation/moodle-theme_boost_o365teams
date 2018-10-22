@@ -587,3 +587,9 @@ a.viewcourseicon {
     color: #484644;
 }
 /* Assignment Module END */
+
+.fa-lightbulb-o {
+    font-family: "FontAwesome";
+    font-size: 15px;
+    border-radius: 5px;
+}
