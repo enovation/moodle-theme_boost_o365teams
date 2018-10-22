@@ -197,6 +197,9 @@ form .felement input {
 format-weeks .course-content .single-section .section-navigation {
     margin-bottom: 0;
 }
+.section-navigation .jumpmenu {
+    width: unset;
+}
 /*.format-weeks .course-content .single-section .section-navigation .mdl-right,*/
 /*.format-weeks .course-content .single-section .section-navigation .mdl-left {*/
 /*display:none;*/
