@@ -104,8 +104,8 @@ form .felement input {
     background-size: 13px 13px;
     font-size: 0.8rem;
 }
-.format-collapsibletopics .course-content ul.collapsibleweeks .sectiontoggle ~ .section-summary-activities,
-.format-collapsibletopics .course-content ul.collapsibleweeks .sectiontoggle.collapsed ~ .section-summary-activities{
+.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle ~ .section-summary-activities,
+.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle.collapsed ~ .section-summary-activities{
     padding-left:20px;
 }
 /*.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle ~ .section-summary-activities,*/
