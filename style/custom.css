@@ -404,9 +404,8 @@ div.footerright {
 a.feedbacklink {
     margin-right: 20px;
     color: #484644;
-}
-.feedbackbutton {
-    margin-top: 15px;
+    display: inline-block;
+    padding-top: 10px;
 }
 .fa-lightbulb-o {
     font-family: "FontAwesome" !important;
