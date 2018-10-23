@@ -389,10 +389,8 @@ a{
 }
 .footerlogo .stamp img {
     float:right;
-    padding-right:40px;
 }
 .user_details {
-    margin-left: 40px;
     color: black;
 }
 div.footerleft {
@@ -595,3 +593,10 @@ a.viewcourseicon {
     color: #484644;
 }
 /* Assignment Module END */
+
+
+/* Quiz Module START */
+.page-mod-quiz-attempt .card div[role="main"] {
+    padding-top: 10px;
+}
+/* Quiz Module END */
