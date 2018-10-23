@@ -406,6 +406,7 @@ a.feedbacklink {
     color: #484644;
     display: inline-block;
     padding-top: 10px;
+    font-size: 0.9375rem;
 }
 .fa-lightbulb-o {
     font-family: "FontAwesome" !important;
