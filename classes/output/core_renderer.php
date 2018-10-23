@@ -151,7 +151,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $feedbacklink = html_writer::link($feedbacklinksetting,
                 html_writer::tag('span',
                     get_string('feedback', 'theme_boost_o365teams'),
-                    array('class' => 'btn btn-secondary feedbackbutton')),
+                    array('class' => 'feedbackbutton')),
                     array('target' => '_blank', 'class' => 'feedbacklink',
                         'title' => get_string('share_feedback', 'theme_boost_o365teams')));
         }
