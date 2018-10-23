@@ -550,6 +550,9 @@ section[data-region="blocks-column"] {
 footer#page-footer {
     display: none;
 }
+#page-mod-assign-grader {
+    display: unset;
+}
 
 header#page-header {
     clear: both;
