@@ -33,6 +33,9 @@ define(['jquery'], function ($) {
                 $('.modtype_quiz .activityinstance a').click(function() {
                     $(this).attr('target', '_self');
                 });
+                $('#page-mod-assign-view .submissionlinks a').click(function() {
+                    $(this).attr('target', '_blank');
+                });
             }
             $("body").fadeIn(150);
         }
