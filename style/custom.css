@@ -79,6 +79,9 @@ form .felement input {
 .format-weeks .section_availability .ishidden {
     padding-left: 32px;
 }
+.format-weeks .availabilityinfo.ishidden {
+    display: none;
+}
 /* weeks format END */
 /* collapsable topics format START */
 .format-collapsibletopics.path-course-view .completionprogress {
@@ -105,15 +108,15 @@ form .felement input {
 .format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle.collapsed ~ .section-summary-activities{
     display: none;
 }
+.format-collapsibletopics .availabilityinfo.ishidden {
+    display: none;
+}
 /*.format-collapsibletopics .expandall {*/
     /*display: none;*/
 /*}*/
 /*.format-collapsibletopics #completionprogressid {*/
     /*display: none;*/
 /*}*/
-.format-collapsibletopics .availabilityinfo.ishidden {
-    display: none;
-}
 /* collapsable topics format END */
 /* collapsable weeks format START */
 .format-collapsibleweeks.path-course-view .completionprogress {
@@ -151,9 +154,9 @@ form .felement input {
 /*.format-collapsibleweeks #completionprogressid {*/
 /*display: none;*/
 /*}*/
-/*.format-collapsibleweeks .availabilityinfo.ishidden {*/
-/*display: none;*/
-/*}*/
+.format-collapsibleweeks .availabilityinfo.ishidden {
+display: none;
+}
 /* collapsable weeks format END */
 /* multi-page topics format START */
 /* main page */
@@ -207,9 +210,9 @@ form .felement input {
 /*.format-weeks #sectionmenu {*/
 /*display: none;*/
 /*}*/
-/*.format-weeks .availabilityinfo.ishidden {*/
-/*display: none;*/
-/*}*/
+.format-weeks .availabilityinfo.ishidden {
+display: none;
+}
 /*!* multi-page weeks format END *!*/
 
 /*!* modules START *!*/
