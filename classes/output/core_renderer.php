@@ -48,7 +48,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function standard_head_html() {
         $output = parent::standard_head_html();
 
-        $output .= "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src data: *\">\n";
+        $output .= "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://statics.teams.microsoft.com; font-src data: *\">\n";
         $output .= "<script src=\"https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js\"></script>\n";
 
         return $output;
