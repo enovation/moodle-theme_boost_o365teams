@@ -60,7 +60,7 @@ microsoftTeams.getContext(function (context) {
 });
 
 function setPageTheme(theme) {
-    $(\"body\").addClass(theme);
+    $("body").addClass(theme);
 }
         ';
         $output .= html_writer::script($js);
