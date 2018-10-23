@@ -596,7 +596,7 @@ a.viewcourseicon {
 
 
 /* Quiz Module START */
-.page-mod-quiz-attempt .card div[role="main"] {
+#page-mod-quiz-attempt .card div[role="main"] {
     padding-top: 10px;
 }
 /* Quiz Module END */
