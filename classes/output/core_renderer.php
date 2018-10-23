@@ -51,6 +51,20 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $output .= "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://statics.teams.microsoft.com; font-src data: *\">\n";
         $output .= "<script src=\"https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js\"></script>\n";
 
+        $js = '
+microsoftTeams.initialize();
+
+microsoftTeams.getContext(function (context) {
+    theme = context.theme;
+    setPageTheme(theme);
+});
+
+function setPageTheme(theme) {
+    $(\"body\").addClass(theme);
+}
+        ';
+        $output .= html_writer::script($js);
+
         return $output;
     }
 
