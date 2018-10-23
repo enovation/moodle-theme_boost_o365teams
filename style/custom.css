@@ -104,10 +104,10 @@ form .felement input {
     background-size: 13px 13px;
     font-size: 0.8rem;
 }
-.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle ~ .section-summary-activities,
-.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle.collapsed ~ .section-summary-activities{
-    display: none;
-}
+/*.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle ~ .section-summary-activities,*/
+/*.format-collapsibletopics .course-content ul.collapsibletopics .sectiontoggle.collapsed ~ .section-summary-activities{*/
+    /*display: none;*/
+/*}*/
 .format-collapsibletopics .availabilityinfo.ishidden {
     display: none;
 }
@@ -166,9 +166,9 @@ display: none;
 .format-topics .course-content .topics .section-summary .section-title {
     margin: 0;
 }
-.format-topics .course-content ul.topics .section-summary-activities {
-    display: none;
-}
+/*.format-topics .course-content ul.topics .section-summary-activities {*/
+    /*display: none;*/
+/*}*/
 /* section page */
 .format-topics .single-section h3.sectionname {
     text-align: unset;
