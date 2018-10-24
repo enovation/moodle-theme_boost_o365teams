@@ -286,6 +286,12 @@ body .back_course_main {
     background-color: #f3f2f1;
     padding: 0;
 }
+.theme_dark > .card-body {
+    background-color: #201F1F;
+}
+.theme_contrast > .card-body {
+    background-color: #000000;
+}
 .container-fluid {
     padding-right: 0;
     padding-left: 0;
