@@ -286,10 +286,10 @@ body .back_course_main {
     background-color: #f3f2f1;
     padding: 0;
 }
-.theme_dark > .card-body {
-    background-color: #201F1F;
+div.theme_dark .card-body {
+    background-color: #2d2c2c;
 }
-.theme_contrast > .card-body {
+.theme_contrast .card-body {
     background-color: #000000;
 }
 .container-fluid {
@@ -302,7 +302,7 @@ body, body.theme_default {
     color: #484644;
 }
 body.theme_dark {
-    background-color: #201F1F;
+    background-color: #2d2c2c;
     color: #ffffff;
 }
 body.theme_contrast {
