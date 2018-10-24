@@ -644,6 +644,8 @@ header#page-header {
     margin-left: 0;
     margin-top: 20px;
     margin-bottom: 10px;
+    font-family: "Segoe UISB";
+    font-size: 15px;
 }
 ul {
     padding-left: 0;
