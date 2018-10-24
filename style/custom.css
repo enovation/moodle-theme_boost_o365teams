@@ -599,14 +599,6 @@ div.teachereditlink i.icon {
 #page-wrapper {
     margin-bottom: 50px !important;
 }
-a.editcourseicon {
-    color: #484644;
-    font-size: 20px;
-}
-a.viewcourseicon {
-    color: #484644;
-    font-size: 20px;
-}
 
 /* Assignment Module START */
 .path-mod-assign td.submissionstatussubmitted, .path-mod-assign div.submissionstatussubmitted, .path-mod-assign a:link.submissionstatussubmitted,

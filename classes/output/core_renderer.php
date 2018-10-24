@@ -69,47 +69,6 @@ function setPageTheme(theme) {
     }
 
     /**
-     * Return HTML for buttons to open the course page in external browser tab.
-     *
-     * @return bool|string
-     * @throws \dml_exception
-     * @throws \moodle_exception
-     * @throws coding_exception
-     */
-    public function course_link() {
-        global $DB, $COURSE;
-
-        $coursecontext = context_course::instance($COURSE->id);
-        $roleassignments = get_user_roles($coursecontext);
-        $teacherrole = $DB->get_record('role', array('shortname' => 'editingteacher'));
-        $noneditingteacherrole = $DB->get_record('role', array('shortname' => 'teacher'));
-
-        $link = '';
-        foreach ($roleassignments as $roleassignment) {
-            if (in_array($roleassignment->roleid, array($teacherrole->id, $noneditingteacherrole->id))) {
-                $editcourselink = new moodle_url('/course/view.php',
-                    array('id' => $COURSE->id, 'edit' => 1, 'sesskey' => sesskey()));
-                $link = html_writer::link($editcourselink, '',
-                    array('target' => '_blank', 'class' => 'editcourseicon fa fa-pencil-square-o',
-                        'title' => get_string('edit_course', 'theme_boost_o365teams')));
-                break;
-            }
-        }
-
-        if (!$link) {
-            $courselink = new moodle_url('/course/view.php', array('id' => $COURSE->id));
-            $link = html_writer::link($courselink, '',
-                array('target' => '_blank', 'class' => 'viewcourseicon fa fa-external-link',
-                    'title' => get_string('open_course', 'theme_boost_o365teams')));
-        }
-
-        $linkobj = new stdClass();
-        $linkobj->teachereditlink = $link;
-
-        return $this->render_from_template('theme_boost_o365teams/course_link', $linkobj);
-    }
-
-    /**
      * Return HTML that shows logged in user link.
      *
      * @return string
