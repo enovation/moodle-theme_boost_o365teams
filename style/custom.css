@@ -211,6 +211,10 @@ form .felement input {
 .section-navigation .jumpmenu {
     width: unset;
 }
+#page-course-view-weeks .navigationtitle .mdl-left,
+#page-course-view-weeks .navigationtitle .mdl-right {
+    display:none;
+}
 /*.format-weeks .course-content .single-section .section-navigation .mdl-right,*/
 /*.format-weeks .course-content .single-section .section-navigation .mdl-left {*/
 /*display:none;*/
