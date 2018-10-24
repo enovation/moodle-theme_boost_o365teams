@@ -421,7 +421,7 @@ a, theme_default a {
 }
 .section .activity .availabilityinfo, .section .activity .contentafterlink {
     float: left;
-    width: 100%;
+    width: 99%;
 }
 .section .activity .mod-indent-outer {
     width: 100%;
