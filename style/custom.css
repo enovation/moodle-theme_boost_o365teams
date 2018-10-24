@@ -42,10 +42,16 @@ form .felement input {
     float: left;
 }
 .format-topics .section .activity {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px;
     padding-left: 20px;
     margin-top: 2px;
+}
+.theme_dark .format-topics .section .activity {
+    background-color: #2d2c2c;
+}
+.theme_contrast .format-topics .section .activity {
+    background-color: #000000;
 }
 .format-topics .sectionname {
     font-size: 1em;
@@ -65,10 +71,16 @@ form .felement input {
     float: left;
 }
 .format-weeks .weeks .section .activity{
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px;
     padding-left: 20px;
     margin-top: 2px;
+}
+.theme_dark .format-weeks .weeks .section .activity {
+    background-color: #2d2c2c;
+}
+.theme_contrast .format-weeks .weeks .section .activity {
+    background-color: #000000;
 }
 .format-weeks .weeks .sectionname {
     font-size: 1em;
@@ -91,10 +103,16 @@ form .felement input {
     padding-left: 0px;
 }
 .format-collapsibletopics .section .activity {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px;
     padding-left: 20px;
     margin-top: 2px;
+}
+.theme_dark .format-collapsibletopics .section .activity {
+    background-color: #2d2c2c;
+}
+.theme_contrast .format-collapsibletopics .section .activity {
+    background-color: #000000;
 }
 .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
     font-size: 15px;
@@ -139,10 +157,16 @@ form .felement input {
     padding-left: 0px;
 }
 .format-collapsibleweeks .section .activity {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px;
     padding-left: 20px;
     margin-top: 2px;
+}
+.theme_dark .format-collapsibleweeks .section .activity {
+    background-color: #2d2c2c;
+}
+.theme_contrast .format-collapsibleweeks .section .activity {
+    background-color: #000000;
 }
 
 .format-collapsibleweeks .course-content ul.collapsibleweeks a.sectiontoggle[aria-expanded="true"],
@@ -416,7 +440,7 @@ a, theme_default a {
     padding-bottom:10px;
 }
 .theme_dark .footerlogo {
-    background-color: #2d2c2c;
+    background-color: #201F1F;
 }
 .theme_contrast .footerlogo {
     background-color: #000000;
