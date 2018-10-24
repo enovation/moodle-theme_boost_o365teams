@@ -56,12 +56,11 @@ microsoftTeams.initialize();
 
 microsoftTeams.getContext(function (context) {
     theme = context.theme;
-    alert(theme);
     setPageTheme(theme);
 });
 
 function setPageTheme(theme) {
-    $("body").addClass(theme);
+    $("div#page-wrapper").addClass("theme_" + theme);
 }
         ';
         $output .= html_writer::script($js);
