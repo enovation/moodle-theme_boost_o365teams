@@ -5,25 +5,25 @@
     font-style: normal;
 }
 @font-face { /* where FontName and fontname represents the name of the font you want to add */
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UIB';
     src: url([[font:theme|segoeuib.ttf]]) format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face { /* where FontName and fontname represents the name of the font you want to add */
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UIL';
     src: url([[font:theme|segoeuil.ttf]]) format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 @font-face { /* where FontName and fontname represents the name of the font you want to add */
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UISL';
     src: url([[font:theme|segoeuisl.ttf]]) format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face { /* where FontName and fontname represents the name of the font you want to add */
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UISB';
     src: url([[font:theme|seguisb.ttf]]) format('truetype');
     font-weight: 600;
     font-style: normal;
@@ -403,6 +403,9 @@ a, theme_default a {
 /* course body END */
 
 /* activity list START */
+.sectionname {
+    font-family: 'Segoe UISB';
+}
 .section .activity .actions {
     float:left;
     position: static;
