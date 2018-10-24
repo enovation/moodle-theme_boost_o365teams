@@ -47,10 +47,10 @@ form .felement input {
     padding-left: 20px;
     margin-top: 2px;
 }
-.theme_dark .format-topics .section .activity {
+.theme_dark.format-topics .section .activity {
     background-color: #2d2c2c;
 }
-.theme_contrast .format-topics .section .activity {
+.theme_contrast.format-topics .section .activity {
     background-color: #000000;
 }
 .format-topics .sectionname {
@@ -76,10 +76,10 @@ form .felement input {
     padding-left: 20px;
     margin-top: 2px;
 }
-.theme_dark .format-weeks .weeks .section .activity {
+.theme_dark.format-weeks .weeks .section .activity {
     background-color: #2d2c2c;
 }
-.theme_contrast .format-weeks .weeks .section .activity {
+.theme_contrast.format-weeks .weeks .section .activity {
     background-color: #000000;
 }
 .format-weeks .weeks .sectionname {
@@ -108,7 +108,7 @@ form .felement input {
     padding-left: 20px;
     margin-top: 2px;
 }
-.theme_dark .format-collapsibletopics .section .activity {
+.theme_dark.format-collapsibletopics .section .activity {
     background-color: #2d2c2c;
 }
 .theme_contrast .format-collapsibletopics .section .activity {
@@ -162,10 +162,10 @@ form .felement input {
     padding-left: 20px;
     margin-top: 2px;
 }
-.theme_dark .format-collapsibleweeks .section .activity {
+.theme_dark.format-collapsibleweeks .section .activity {
     background-color: #2d2c2c;
 }
-.theme_contrast .format-collapsibleweeks .section .activity {
+.theme_contrast.format-collapsibleweeks .section .activity {
     background-color: #000000;
 }
 
