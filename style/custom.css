@@ -290,10 +290,18 @@ body .back_course_main {
     padding-right: 0;
     padding-left: 0;
 }
-body {
+body, body.theme_default {
     background-color: #f3f2f1;
     font-size: 0.875rem;
     color: #484644;
+}
+body.theme_dark {
+    background-color: #201F1F;
+    color: #ffffff;
+}
+body.theme_contrast {
+    background-color: #000000;
+    color: #ffffff;
 }
 #region-main-box {
     padding-right: 0;
