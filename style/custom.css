@@ -365,6 +365,12 @@ body.theme_contrast {
 .pagelayout-incourse .card-body {
     background-color: #ffffff;
 }
+.theme_dark.pagelayout-incourse .card-body {
+    background-color: #201F1F;
+}
+.theme_contrast.pagelayout-incourse .card-body {
+    background-color: #000000;
+}
 .pagelayout-incourse .card-body div[role="main"] {
     border-top: solid 2px #f3f2f1;
     padding-right: 15px;
