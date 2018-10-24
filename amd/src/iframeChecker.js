@@ -16,7 +16,6 @@ define(['jquery'], function ($) {
                 $('div#page').css('margin-top', '0');
                 $('section#region-main.has-blocks').css('width', '100%');
                 $('div#page-wrapper').css('margin-bottom', '0');
-                $('div.teachereditlink').css('display', 'block');
                 $('div.context-header-settings-menu').remove();
                 $('div.region-main-settings-menu').remove();
                 $('div.region_main_settings_menu_proxy').remove();
