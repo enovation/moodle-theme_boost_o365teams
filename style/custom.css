@@ -303,7 +303,7 @@ body .back_course_main {
     padding: 0;
 }
 .theme_dark .card-body {
-    background-color: #2d2c2c;
+    background-color: #201F1F;
 }
 .theme_contrast .card-body {
     background-color: #000000;
@@ -318,7 +318,7 @@ body, body.theme_default {
     color: #484644;
 }
 body.theme_dark {
-    background-color: #2d2c2c;
+    background-color: #201F1F;
     color: #ffffff;
 }
 body.theme_contrast {
