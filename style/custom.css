@@ -636,6 +636,7 @@ header#page-header {
 
 .btn {
     font-size: 0.875rem;
+    height:unset;
 }
 .course-content ul.section {
     margin: 0;
