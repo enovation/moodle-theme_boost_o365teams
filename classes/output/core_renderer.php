@@ -56,6 +56,7 @@ microsoftTeams.initialize();
 
 microsoftTeams.getContext(function (context) {
     theme = context.theme;
+    alert(theme);
     setPageTheme(theme);
 });
 
