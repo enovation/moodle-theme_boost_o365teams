@@ -353,6 +353,16 @@ a{
 .section .activity .activityinstance, .section .activity .activityinstance > a {
     float:left;
 }
+.section .activity .contentwithoutlink, .section .activity .activityinstance {
+    min-width: 15%;
+}
+.section .activity .availabilityinfo, .section .activity .contentafterlink {
+    float: left;
+    width: 100%;
+}
+.section .activity .mod-indent-outer {
+    width: 100%;
+}
 /* activity list END */
 /* footer START */
 .footerlogo {
