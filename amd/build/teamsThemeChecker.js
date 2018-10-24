@@ -7,6 +7,13 @@ define(['jquery'], function($) {
                 theme = context.theme;
                 $("div#page").addClass("theme_" + theme);
             });
+
+            microsoftTeams.registerOnThemeChangeHandler(function (theme) {
+                $("div#page").removeClass("theme_default");
+                $("div#page").removeClass("theme_dark");
+                $("div#page").removeClass("theme_contrast");
+                $("div#page").addClass("theme_" + theme);
+            });
         }
     }
 });
