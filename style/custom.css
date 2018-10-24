@@ -145,6 +145,12 @@ form .felement input {
     font-size: 15px;
     color: #000;
 }
+.theme_dark .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
+    color: #fff;
+}
+.theme_contrast .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
+    color: #fff;
+}
 .format-collapsibleweeks .section_availability .ishidden {
     padding-left: 32px;
 }
@@ -374,6 +380,12 @@ a{
     background-color: #f3f2f1;
     padding-top:10px;
     padding-bottom:10px;
+}
+.theme_dark .footerlogo {
+    background-color: #2d2c2c;
+}
+.theme_contrast .footerlogo {
+    background-color: #000000;
 }
 .footerlogo .stamp img {
     float:right;
