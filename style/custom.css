@@ -98,7 +98,13 @@ form .felement input {
 }
 .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
     font-size: 15px;
-    color: #000;
+    color: #000000;
+}
+.theme_dark .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
+    color: #ffffff;
+}
+.theme_contrast .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
+    color: #ffffff;
 }
 .format-collapsibletopics .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="true"], .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="false"] {
     background-size: 13px 13px;
@@ -143,13 +149,13 @@ form .felement input {
 }
 .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
     font-size: 15px;
-    color: #000;
+    color: #000000;
 }
 .theme_dark .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
-    color: #fff;
+    color: #ffffff;
 }
 .theme_contrast .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
-    color: #fff;
+    color: #ffffff;
 }
 .format-collapsibleweeks .section_availability .ishidden {
     padding-left: 32px;
