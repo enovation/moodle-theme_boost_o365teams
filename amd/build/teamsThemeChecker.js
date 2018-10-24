@@ -6,7 +6,6 @@ define(['jquery'], function($) {
             microsoftTeams.getContext(function (context) {
                 theme = context.theme;
                 $("body").addClass("theme_" + theme);
-                $("body").css("display", "block");
             });
 
             microsoftTeams.registerOnThemeChangeHandler(function (theme) {
