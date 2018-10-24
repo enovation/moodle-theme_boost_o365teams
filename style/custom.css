@@ -98,6 +98,7 @@ form .felement input {
 }
 .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
     font-size: 15px;
+    color: #000000;
 }
 .theme_default .course-content ul.collapsibletopics li.section .sectionname {
     color: #000000;
@@ -151,6 +152,7 @@ form .felement input {
 }
 .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
     font-size: 15px;
+    color: #000000;
 }
 .theme_default .course-content ul.collapsibleweeks li.section .sectionname {
     color: #000000;
@@ -254,6 +256,12 @@ form .felement input {
     font-size: 28px;
     padding-left: 40px;
 }
+.theme_dark #course_page_title {
+    background-color: #2d2c2c;
+}
+.theme_contrast #course_page_title {
+    background-color: #000000;
+}
 body .back_course_main {
     position: relative;
     display: block;
@@ -353,8 +361,14 @@ body.theme_contrast {
     margin-left: 0px;
 }
 
-a{
+a, theme_default a {
     color: #484644;
+}
+.theme_dark a {
+    color: #6264A7;
+}
+.theme_contrast a {
+    color: #FFFF00;
 }
 /* course body END */
 
@@ -427,6 +441,15 @@ a.feedbacklink {
     display: inline-block;
     padding-top: 10px;
     font-size: 0.9375rem;
+}
+.theme_default a.feedbacklink {
+    color: #484644;
+}
+.theme_dark a.feedbacklink {
+    color: #c8c6c4;
+}
+.theme_contrast a.feedbacklink {
+    color: #FFFF00;
 }
 .fa-lightbulb-o {
     font-family: "FontAwesome" !important;
