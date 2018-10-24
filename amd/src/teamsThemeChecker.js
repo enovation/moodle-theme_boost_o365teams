@@ -5,14 +5,14 @@ define(['jquery'], function($) {
 
             microsoftTeams.getContext(function (context) {
                 theme = context.theme;
-                $("div#page").addClass("theme_" + theme);
+                $("body").addClass("theme_" + theme);
             });
 
             microsoftTeams.registerOnThemeChangeHandler(function (theme) {
-                $("div#page").removeClass("theme_default");
-                $("div#page").removeClass("theme_dark");
-                $("div#page").removeClass("theme_contrast");
-                $("div#page").addClass("theme_" + theme);
+                $("body").removeClass("theme_default");
+                $("body").removeClass("theme_dark");
+                $("body").removeClass("theme_contrast");
+                $("body").addClass("theme_" + theme);
             });
         }
     }
