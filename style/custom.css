@@ -98,6 +98,8 @@ form .felement input {
 }
 .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
     font-size: 15px;
+}
+.theme_default .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
     color: #000000;
 }
 .theme_dark .format-collapsibletopics .course-content ul.collapsibletopics li.section .sectionname {
@@ -149,6 +151,8 @@ form .felement input {
 }
 .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
     font-size: 15px;
+}
+.theme_default .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
     color: #000000;
 }
 .theme_dark .format-collapsibleweeks .course-content ul.collapsibleweeks li.section .sectionname {
