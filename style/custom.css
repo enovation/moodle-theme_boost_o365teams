@@ -379,6 +379,16 @@ a{
 .section .activity .mod-indent-outer {
     width: 100%;
 }
+.section .label .mod-indent-outer {
+    padding-left: 0;
+}
+.section .activity.modtype_label.label {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
 /* activity list END */
 /* footer START */
 .footerlogo {

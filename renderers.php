@@ -82,9 +82,6 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
         // activity.
         $contentpart = $this->course_section_cm_text($mod, $displayoptions);
         $url = $mod->url;
-        if (empty($url)) {
-            $output .= $contentpart;
-        }
 
         $modicons = '';
         if ($this->page->user_is_editing()) {
@@ -112,7 +109,9 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
             // Closing the tag which contains everything but edit icons. Content part of the module should not be part of this.
             $output .= html_writer::end_tag('div'); // .activityinstance
         }
-
+        if (empty($url)) {
+            $output .= $contentpart;
+        }
         // Show availability info (if module is not available).
         $output .= $this->course_section_cm_availability($mod, $displayoptions);
 
