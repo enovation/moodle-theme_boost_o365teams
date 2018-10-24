@@ -113,13 +113,12 @@ function setPageTheme(theme) {
      * Return HTML for feedback link.
      *
      * @return string
-     * @throws \dml_exception
      * @throws coding_exception
      */
     public function feedback_link() {
         $feedbacklink = '';
 
-        $feedbacklinksetting = get_config('theme_boost_o365teams', 'feedbackurl');
+        $feedbacklinksetting = 'https://microsoftteams.uservoice.com/forums/916759-moodle'; // hardcoded URL
         if ($feedbacklinksetting) {
             $feedbacklink = html_writer::link($feedbacklinksetting,
                 html_writer::tag('span',
@@ -135,13 +134,10 @@ function setPageTheme(theme) {
      * Return page footer stamp.
      * Stamp is from user upload in theme settings, or Moodle logo if not uploaded.
      *
-     * @param int $maxwidth
-     * @param int $maxheight
-     *
      * @return string
      * @throws \moodle_exception
      */
-    function get_footer_stamp($maxwidth = 120, $maxheight = 60) {
+    function get_footer_stamp() {
         global $CFG, $PAGE, $OUTPUT;
 
         if (!empty($PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp'))) {

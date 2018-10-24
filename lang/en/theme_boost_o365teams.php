@@ -35,7 +35,5 @@ $string['footer_stamp_desc'] = "Displays Image or logo at bottom right of tabs.<
 
 $string['share_feedback'] = 'Share feedback';
 $string['feedback'] = 'Feedback';
-$string['setting_feedbackurl'] = 'Send feedback URL';
-$string['setting_feedbackurl_desc'] = 'If configured, a link will show in tab footer to allow users to send feedback.';
 $string['edit_course'] = 'Edit course in browser window';
 $string['open_course'] = 'Open course in browser window';
