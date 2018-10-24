@@ -470,16 +470,16 @@ div.footerright {
 }
 a.feedbacklink {
     margin-right: 20px;
-    color: #484644;
+    color: #6264A7;
     display: inline-block;
     padding-top: 10px;
     font-size: 0.9375rem;
 }
 .theme_default a.feedbacklink {
-    color: #484644;
+    color: #6264A7;
 }
 .theme_dark a.feedbacklink {
-    color: #c8c6c4;
+    color: #6264A7;
 }
 .theme_contrast a.feedbacklink {
     color: #FFFF00;
