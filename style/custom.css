@@ -707,7 +707,7 @@ ul {
 }
 
 .submitbtns_with_return {
-    text-align: center;
+    text-align: center !important;
 }
 
 .mod_quiz-prev-nav {
