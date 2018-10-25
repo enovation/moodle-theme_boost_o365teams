@@ -175,7 +175,7 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
     }
 }
 
-class theme_boost_o365teams_mod_quiz_renderer {
+class theme_boost_o365teams_mod_quiz_renderer extends mod_quiz_renderer {
     /**
      * Display the prev/next buttons that go at the bottom of each page of the attempt.
      * A new "return to quiz menu" button is added in the custom renderer function.
