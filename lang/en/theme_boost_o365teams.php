@@ -37,3 +37,5 @@ $string['share_feedback'] = 'Share feedback';
 $string['feedback'] = 'Feedback';
 $string['edit_course'] = 'Edit course in browser window';
 $string['open_course'] = 'Open course in browser window';
+
+$string['navigatereturn'] = 'Return to quiz menu';

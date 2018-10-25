@@ -174,3 +174,38 @@ class theme_boost_o365teams_core_course_renderer extends core_course_renderer {
         return $output;
     }
 }
+
+class theme_boost_o365teams_mod_quiz_renderer {
+    /**
+     * Display the prev/next buttons that go at the bottom of each page of the attempt.
+     * A new "return to quiz menu" button is added in the custom renderer function.
+     *
+     * @param int $page the page number. Starts at 0 for the first page.
+     * @param bool $lastpage is this the last page in the quiz?
+     * @param string $navmethod Optional quiz attribute, 'free' (default) or 'sequential'
+     * @return string HTML fragment.
+     */
+    protected function attempt_navigation_buttons($page, $lastpage, $navmethod = 'free') {
+        $output = '';
+
+        $output .= html_writer::start_tag('div', array('class' => 'submitbtns'));
+        if ($page > 0 && $navmethod == 'free') {
+            $output .= html_writer::empty_tag('input', array('type' => 'submit', 'name' => 'previous',
+                'value' => get_string('navigateprevious', 'quiz'), 'class' => 'mod_quiz-prev-nav btn btn-secondary'));
+        }
+        // Go back button
+        $output .= html_writer::empty_tag('input', array('type' => 'submit', 'name' => 'return',
+            'value' => get_string('navigatereturn', 'theme_boost_o365teams'),
+            'class' => 'btn btn-secondary mod_quiz-return-nav'));
+        if ($lastpage) {
+            $nextlabel = get_string('endtest', 'quiz');
+        } else {
+            $nextlabel = get_string('navigatenext', 'quiz');
+        }
+        $output .= html_writer::empty_tag('input', array('type' => 'submit', 'name' => 'next',
+            'value' => $nextlabel, 'class' => 'mod_quiz-next-nav btn btn-primary'));
+        $output .= html_writer::end_tag('div');
+
+        return $output;
+    }
+}
