@@ -2,6 +2,7 @@
 
 require_once($CFG->dirroot . '/course/renderer.php');
 require_once($CFG->dirroot . '/mod/assign/renderer.php');
+require_once($CFG->dirroot . '/mod/quiz/renderer.php');
 
 class theme_boost_o365teams_mod_assign_renderer extends mod_assign_renderer {
     /**
