@@ -705,3 +705,15 @@ ul {
 .section .activity .availabilityinfo, .section .activity .contentafterlink {
     padding-right: 30px;
 }
+
+.submitbtns_with_return {
+    text-align: center;
+}
+
+.mod_quiz-prev-nav {
+    float: left;
+}
+
+.mod_quiz-return-nav {
+    margin: 0 auto;
+}

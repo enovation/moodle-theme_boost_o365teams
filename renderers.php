@@ -247,14 +247,11 @@ class theme_boost_o365teams_mod_quiz_renderer extends mod_quiz_renderer {
     protected function attempt_navigation_buttons($page, $lastpage, $navmethod = 'free', $viewurl) {
         $output = '';
 
-        $output .= html_writer::start_tag('div', array('class' => 'submitbtns'));
+        $output .= html_writer::start_tag('div', array('class' => 'submitbtns submitbtns_with_return'));
         if ($page > 0 && $navmethod == 'free') {
             $output .= html_writer::empty_tag('input', array('type' => 'submit', 'name' => 'previous',
                 'value' => get_string('navigateprevious', 'quiz'), 'class' => 'mod_quiz-prev-nav btn btn-secondary'));
         }
-        // Go back button
-        $output .= html_writer::link($viewurl, get_string('navigatereturn', 'theme_boost_o365teams'),
-            array('class' => 'btn btn-secondary mod_quiz-return-nav'));
         if ($lastpage) {
             $nextlabel = get_string('endtest', 'quiz');
         } else {
@@ -262,6 +259,9 @@ class theme_boost_o365teams_mod_quiz_renderer extends mod_quiz_renderer {
         }
         $output .= html_writer::empty_tag('input', array('type' => 'submit', 'name' => 'next',
             'value' => $nextlabel, 'class' => 'mod_quiz-next-nav btn btn-primary'));
+        // Return button
+        $output .= html_writer::link($viewurl, get_string('navigatereturn', 'theme_boost_o365teams'),
+            array('class' => 'btn btn-secondary mod_quiz-return-nav'));
         $output .= html_writer::end_tag('div');
 
         return $output;
