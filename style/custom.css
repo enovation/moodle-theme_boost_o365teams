@@ -689,6 +689,9 @@ ul {
     color: inherit;
     background-color: inherit;
 }
+.table-hover tbody tr:hover, table.grading-report tbody tr:hover, .forumheaderlist tbody tr:hover, .generaltable tbody tr:hover, table.flexible tbody tr:hover, .category_subcategories tbody tr:hover, table#modules tbody tr:hover, table#permissions tbody tr:hover {
+    background-color: #f2f2f2;
+}
 /* Assignment Module END */
 
 
