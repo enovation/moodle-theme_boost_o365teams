@@ -204,7 +204,7 @@ class theme_boost_o365teams_mod_quiz_renderer extends mod_quiz_renderer {
         }
 
         $navmethod = $attemptobj->get_quiz()->navmethod;
-        $output .= $this->attempt_navigation_buttons($page, $attemptobj->is_last_page($page), $navmethod,
+        $output .= $this->attempt_navigation_buttons_with_link($page, $attemptobj->is_last_page($page), $navmethod,
             $attemptobj->view_url());
 
         // Some hidden fields to trach what is going on.
@@ -235,16 +235,20 @@ class theme_boost_o365teams_mod_quiz_renderer extends mod_quiz_renderer {
 
         return $output;
     }
+
     /**
      * Display the prev/next buttons that go at the bottom of each page of the attempt.
      * A new "return to quiz menu" button is added in the custom renderer function.
      *
+     * This function is created based on attemp_navigation_buttons() function of parent class.
+     *
      * @param int $page the page number. Starts at 0 for the first page.
      * @param bool $lastpage is this the last page in the quiz?
      * @param string $navmethod Optional quiz attribute, 'free' (default) or 'sequential'
+     * @param string|bool $viewurl URL to the view quiz page.
      * @return string HTML fragment.
      */
-    protected function attempt_navigation_buttons($page, $lastpage, $navmethod = 'free', $viewurl) {
+    protected function attempt_navigation_buttons_with_link($page, $lastpage, $navmethod = 'free', $viewurl = null) {
         $output = '';
 
         $output .= html_writer::start_tag('div', array('class' => 'submitbtns submitbtns_with_return'));
@@ -259,9 +263,11 @@ class theme_boost_o365teams_mod_quiz_renderer extends mod_quiz_renderer {
         }
         $output .= html_writer::empty_tag('input', array('type' => 'submit', 'name' => 'next',
             'value' => $nextlabel, 'class' => 'mod_quiz-next-nav btn btn-primary'));
-        // Return button
-        $output .= html_writer::link($viewurl, get_string('navigatereturn', 'theme_boost_o365teams'),
-            array('class' => 'btn btn-secondary mod_quiz-return-nav'));
+        if ($viewurl) {
+            // Return button
+            $output .= html_writer::link($viewurl, get_string('navigatereturn', 'theme_boost_o365teams'),
+                array('class' => 'btn btn-secondary mod_quiz-return-nav'));
+        }
         $output .= html_writer::end_tag('div');
 
         return $output;
