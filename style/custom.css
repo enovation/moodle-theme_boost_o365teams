@@ -699,6 +699,10 @@ ul {
 #page-mod-quiz-attempt .card div[role="main"], #page-mod-quiz-view .card div[role="main"] {
     padding-top: 10px;
 }
+.card .quizattempt .continuebutton {
+    display: inline-block;
+    margin-left: 3px;
+}
 /* Quiz Module END */
 /*!* modules END *!*/
 

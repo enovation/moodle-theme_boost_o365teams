@@ -266,4 +266,13 @@ class theme_boost_o365teams_mod_quiz_renderer extends mod_quiz_renderer {
 
         return $output;
     }
+    public function no_questions_message($canedit, $editurl) {
+        $output = '';
+        $output .= $this->notification(get_string('noquestions', 'quiz'));
+        if ($canedit) {
+            $output .= $this->single_button($editurl, get_string('editquiz', 'quiz'), 'get', array("primary"=>true));
+        }
+
+        return $output;
+    }
 }

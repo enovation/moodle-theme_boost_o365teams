@@ -35,7 +35,7 @@ define(['jquery'], function ($) {
                 $('#page-mod-assign-view .submissionlinks a').click(function() {
                     $(this).attr('target', '_blank');
                 });
-                $('.quizattempt .singlebutton button').click(function() {
+                $('.quizattempt .singlebutton form').click(function() {
                     $(this).attr('target', '_blank');
                 });
             }
