@@ -40,25 +40,25 @@ $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
-$course_page = $CFG->wwwroot.'/course/view.php?id='.$PAGE->course->id;
+$coursepage = $CFG->wwwroot . '/course/view.php?id=' . $PAGE->course->id;
 $url = $PAGE->url;
-$is_course_overview=false;
-if ((strpos($url, 'course/view.php') !== false) && (strpos($url, 'section=') == false) ){
-    $is_course_overview = false;
+$iscourseoverview = false;
+if ((strpos($url, 'course/view.php') !== false) && (strpos($url, 'section=') == false)) {
+    $iscourseoverview = false;
 } else {
-    $is_course_overview = true;
+    $iscourseoverview = true;
 }
 $templatecontext = [
-    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'output' => $OUTPUT,
-    'sidepreblocks' => $blockshtml,
-    'hasblocks' => $hasblocks,
-    'bodyattributes' => $bodyattributes,
-    'navdraweropen' => $navdraweropen,
-    'regionmainsettingsmenu' => $regionmainsettingsmenu,
-    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'course_page' => $course_page,
-    'is_course_overview' => $is_course_overview,
+        'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+        'output' => $OUTPUT,
+        'sidepreblocks' => $blockshtml,
+        'hasblocks' => $hasblocks,
+        'bodyattributes' => $bodyattributes,
+        'navdraweropen' => $navdraweropen,
+        'regionmainsettingsmenu' => $regionmainsettingsmenu,
+        'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+        'course_page' => $coursepage,
+        'is_course_overview' => $iscourseoverview,
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;

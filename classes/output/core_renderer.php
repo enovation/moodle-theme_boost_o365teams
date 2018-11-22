@@ -48,7 +48,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function standard_head_html() {
         $output = parent::standard_head_html();
 
-        $output .= "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://statics.teams.microsoft.com; font-src data: *\">\n";
+        $output .= "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src *; style-src 'self'
+                   'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://statics.teams.microsoft.com;
+                    font-src data: *\">\n";
         $output .= "<script src=\"https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js\"></script>\n";
 
         return $output;
@@ -63,11 +65,11 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function user_link() {
         global $USER, $OUTPUT;
 
-        if(!empty($USER->id)) {
+        if (!empty($USER->id)) {
 
             $profilepagelink = new moodle_url('/user/profile.php',
                     array('id' => $USER->id));
-            $profilepic = $OUTPUT->user_picture($USER, array('size'=>26, 'link' => false));
+            $profilepic = $OUTPUT->user_picture($USER, array('size' => 26, 'link' => false));
             $userfullname = fullname($USER);
             $piclink = html_writer::link($profilepagelink, $profilepic,
                     array('target' => '_blank', 'class' => 'user_details'));
@@ -75,7 +77,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                     array('target' => '_blank'));
 
             return $piclink . $userprofile;
-        } else{
+        } else {
             return "";
         }
     }
@@ -104,13 +106,14 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function feedback_link() {
         $feedbacklink = '';
 
-        $feedbacklinksetting = 'https://microsoftteams.uservoice.com/forums/916759-moodle'; // hardcoded URL
+        // Hardcoded URL.
+        $feedbacklinksetting = 'https://microsoftteams.uservoice.com/forums/916759-moodle';
         if ($feedbacklinksetting) {
             $feedbacklink = html_writer::link($feedbacklinksetting,
-                html_writer::tag('span',
-                    get_string('feedback', 'theme_boost_o365teams')),
+                    html_writer::tag('span',
+                            get_string('feedback', 'theme_boost_o365teams')),
                     array('target' => '_blank', 'class' => 'feedbacklink',
-                        'title' => get_string('share_feedback', 'theme_boost_o365teams')));
+                            'title' => get_string('share_feedback', 'theme_boost_o365teams')));
         }
 
         return $feedbacklink;
@@ -123,7 +126,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      * @throws \moodle_exception
      */
-    function get_footer_stamp() {
+    public function get_footer_stamp() {
         global $CFG, $PAGE, $OUTPUT;
 
         if (!empty($PAGE->theme->setting_file_url('footer_stamp', 'footer_stamp'))) {
